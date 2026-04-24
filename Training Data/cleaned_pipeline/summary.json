@@ -1,0 +1,85 @@
+{
+  "training_dir": "/Users/wewlad/GitHub/AI_Training_Tests/Training Data",
+  "output_dir": "/Users/wewlad/GitHub/AI_Training_Tests/Training Data/cleaned_pipeline",
+  "dialogue_weight": 8,
+  "valid_ratio": 0.1,
+  "seed": 42,
+  "qa": {
+    "asclepius": {
+      "input_records": 21,
+      "kept_records": 10,
+      "dropped_records": 11,
+      "min_confidence": "medium",
+      "drop_reasons": {
+        "truncated_answer": 9,
+        "editorial_contamination": 2
+      }
+    },
+    "corpus_hermeticum": {
+      "input_records": 51,
+      "kept_records": 42,
+      "dropped_records": 9,
+      "min_confidence": "high",
+      "drop_reasons": {
+        "low_confidence": 9
+      }
+    },
+    "key_to_theosophy": {
+      "input_records": 390,
+      "kept_records": 371,
+      "dropped_records": 19,
+      "min_confidence": "high",
+      "drop_reasons": {
+        "truncated_answer": 17,
+        "editorial_contamination": 1,
+        "low_confidence": 1
+      }
+    },
+    "milinda_panha": {
+      "input_records": 298,
+      "kept_records": 44,
+      "dropped_records": 254,
+      "min_confidence": "high",
+      "drop_reasons": {
+        "low_confidence": 254
+      }
+    },
+    "platform_sutra": {
+      "input_records": 43,
+      "kept_records": 39,
+      "dropped_records": 4,
+      "min_confidence": "high",
+      "drop_reasons": {
+        "low_confidence": 3,
+        "truncated_answer": 1
+      }
+    }
+  },
+  "dialogue": {
+    "lmstudio_dual_chat_transcript.json": {
+      "input_messages": 8,
+      "combined_examples": 6,
+      "skipped_truncated": 1,
+      "skipped_role_bleed": 0,
+      "participant_b_examples": 4,
+      "participant_a_examples": 2
+    }
+  },
+  "merged": {
+    "qa_messages": 506,
+    "dialogue_messages": 6,
+    "participant_a_messages": 2,
+    "participant_b_messages": 4,
+    "model_a_train": 464,
+    "model_a_valid": 51,
+    "model_b_train": 480,
+    "model_b_valid": 51
+  },
+  "output_files": {
+    "qa_messages": "/Users/wewlad/GitHub/AI_Training_Tests/Training Data/cleaned_pipeline/cleaned_qa/combined_messages.jsonl",
+    "dialogue_a": "/Users/wewlad/GitHub/AI_Training_Tests/Training Data/cleaned_pipeline/cleaned_dialogue/participant_a_messages.jsonl",
+    "dialogue_b": "/Users/wewlad/GitHub/AI_Training_Tests/Training Data/cleaned_pipeline/cleaned_dialogue/participant_b_messages.jsonl",
+    "model_a_train": "/Users/wewlad/GitHub/AI_Training_Tests/Training Data/cleaned_pipeline/model_a/train.jsonl",
+    "model_b_train": "/Users/wewlad/GitHub/AI_Training_Tests/Training Data/cleaned_pipeline/model_b/train.jsonl"
+  }
+}
