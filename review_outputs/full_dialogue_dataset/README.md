@@ -27,30 +27,36 @@ Each row uses chat messages:
 
 ## Current counts
 
-- Combined: 862 rows, 779 train, 83 eval.
-- Esoteric: 398 rows, 359 train, 39 eval.
-- Buddhist: 464 rows, 420 train, 44 eval.
+- Combined: 1,277 rows, 1,156 train, 121 eval.
+- Occult / esoteric: 423 rows, 382 train, 41 eval.
+- Buddhist: 854 rows, 774 train, 80 eval.
 
 ## Included sources
 
 - `The Key to Theosophy`: 370 rows.
 - `The Corpus Hermeticum`: 28 rows.
+- `Asclepius`: 25 rows.
 - `Milinda Panha`: 73 rows.
 - `Platform Sutra`: 19 rows.
+- `Itivuttaka`: 107 rows.
+- `Majjhima Nikaya`: 168 rows.
 - `The Gateless Gate`: 129 rows.
 - `The Diamond Sutra`: 83 rows.
 - `Udana`: 80 rows.
 - `Sutta Nipata`: 80 rows.
+- `Vimalakirti Nirdesa Sutra`: 17 rows.
+- `Zen Koans Database`: 98 rows.
 
 ## Rebuild command
 
 From the repository root:
 
 ```bash
-PYTHONPATH=scripts/extraction python3 scripts/extraction/build_full_dialogue_outputs.py
+python scripts/extraction/build_full_dialogue_outputs.py
 ```
 
 That command rebuilds the original-source dialogue rows, parses the included
-Gateless Gate, Diamond Sutra, Udana, and Sutta Nipata sources, combines the
-current full JSONL files, regenerates train/eval splits, and refreshes review
-samples.
+parser outputs, combines the current full JSONL files, regenerates train/eval
+splits, and refreshes review samples. Shared code is migrating into
+`src/ai_training_tests/`; legacy `scripts/extraction/` paths remain available as
+compatibility entrypoints.

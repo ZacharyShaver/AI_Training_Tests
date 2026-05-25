@@ -82,7 +82,7 @@ from and what kind of row it is.
 The current full rebuild command is:
 
 ```bash
-PYTHONPATH=scripts/extraction python3 scripts/extraction/build_full_dialogue_outputs.py
+python scripts/extraction/build_full_dialogue_outputs.py
 ```
 
 That script is the project's main "run everything" button.
@@ -104,9 +104,9 @@ The current full output goes here:
 review_outputs/full_dialogue_dataset/
 ```
 
-The current generated full output contains 862 combined rows: 779 train rows and
-83 eval rows. The Buddhist split has 464 rows, and the esoteric split has 398
-rows.
+The current generated full output contains 1,277 combined rows: 1,156 train rows
+and 121 eval rows. The Buddhist split has 854 rows, and the occult / esoteric
+split has 423 rows.
 
 ## Step 1: Mine Or Parse Source Texts
 
@@ -241,8 +241,9 @@ It currently includes:
 - Sutta Nipata rows
 
 The script regenerates those included source outputs before combining them.
-Itivuttaka, Blue Cliff Record, and Zen Koans Database outputs exist separately,
-but they are not currently part of the full combined dataset.
+Itivuttaka, Majjhima Nikaya, Vimalakirti Nirdesa Sutra, Zen Koans Database, and
+Asclepius are also represented in the current final family datasets. Blue Cliff
+Record, Dhammapada Commentary, and Udana direct-dialogue rows remain candidates.
 
 ### `scripts/extraction/mine_dialogue_candidates.py`
 
@@ -405,8 +406,19 @@ itivuttaka_prose_to_verse
 ```
 
 This is useful, but it is not the same as a normal back-and-forth conversation.
-The full rebuild script does not currently merge these rows into the final full
-dataset.
+Itivuttaka rows are included in the current Buddhist final dataset.
+
+### `src/ai_training_tests/`
+
+This package is the new architecture spine. Shared modules are moving here while
+old script paths stay available:
+
+- `domain/dialogue_schema.py`: validates the three-message chat row schema.
+- `domain/source_manifest.py`: tracks approved source families and output groups.
+- `extraction/common/jsonl_io.py`: shared JSONL read/write helpers.
+- `extraction/common/text_cleaning.py`: shared source-text cleanup helpers.
+- `extraction/review/review_policy.py`: machine-review policy helpers.
+- `extraction/parsers/asclepius.py`: first migrated source parser.
 
 ### `scripts/extraction/combine_dialogue_datasets.py`
 
@@ -424,10 +436,14 @@ Current Buddhist source names:
 
 - `Milinda Panha`
 - `Platform Sutra`
+- `Itivuttaka`
+- `Majjhima Nikaya`
 - `The Gateless Gate`
 - `The Diamond Sutra`
 - `Udana`
 - `Sutta Nipata`
+- `Vimalakirti Nirdesa Sutra`
+- `Zen Koans Database`
 
 Current esoteric source names:
 
@@ -435,8 +451,7 @@ Current esoteric source names:
 - `The Corpus Hermeticum`
 - `Asclepius`
 
-`Asclepius` is included in the grouping rules, but the current main full rebuild
-does not appear to generate Asclepius rows.
+`Asclepius` is included in the current occult / esoteric final dataset.
 
 ### `scripts/extraction/make_review_sample.py`
 
@@ -630,7 +645,7 @@ Common options:
 For example:
 
 ```bash
-PYTHONPATH=scripts/extraction python3 scripts/extraction/parse_diamond_sutra.py --max-target-words 700
+python scripts/extraction/parse_diamond_sutra.py --max-target-words 700
 ```
 
 ## What To Watch Out For
@@ -647,10 +662,10 @@ PYTHONPATH=scripts/extraction python3 scripts/extraction/parse_diamond_sutra.py 
 ## Quick Troubleshooting
 
 If imports fail when running extraction scripts, run from the repository root and
-include `PYTHONPATH`:
+use the compatibility entrypoint:
 
 ```bash
-PYTHONPATH=scripts/extraction python3 scripts/extraction/build_full_dialogue_outputs.py
+python scripts/extraction/build_full_dialogue_outputs.py
 ```
 
 If the Streamlit app cannot find models, make sure LM Studio is running its local

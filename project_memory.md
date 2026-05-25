@@ -13,10 +13,13 @@ Build clean training data from philosophical and spiritual source texts, then pr
 ## Current Dataset State
 
 - Active training format is direct-source dialogue: `conversation so far -> next reply`.
-- Current full combined dataset has 862 rows: 779 train and 83 eval.
-- Current Buddhist split has 464 rows.
-- Current esoteric split has 398 rows.
-- The full dataset currently includes The Key to Theosophy, The Corpus Hermeticum, Milinda Panha, Platform Sutra, The Gateless Gate, The Diamond Sutra, Udana, and Sutta Nipata.
+- Current full combined dataset has 1,277 rows: 1,156 train and 121 eval.
+- Current Buddhist split has 854 rows.
+- Current occult / esoteric split has 423 rows.
+- The full dataset currently includes Itivuttaka, Majjhima Nikaya, Milinda Panha,
+  Platform Sutra, Sutta Nipata, The Diamond Sutra, The Gateless Gate, Udana,
+  Vimalakirti Nirdesa Sutra, Zen Koans Database, Asclepius, The Corpus
+  Hermeticum, and The Key to Theosophy.
 - The main rebuild script regenerates the included source outputs before combining datasets.
 
 ## Historical Q&A Corpora
@@ -59,6 +62,13 @@ splits in `review_outputs/full_dialogue_dataset/`.
 - `scripts/extraction/build_full_dialogue_outputs.py`
   Main current rebuild command for the full direct-source dialogue dataset.
 - Source-specific parsers live under `scripts/extraction/`.
+- `src/ai_training_tests/`
+  New package spine for shared domain modules, review helpers, JSONL helpers,
+  and migrated parsers. Current script paths remain compatibility entrypoints.
+- `dashboard/index.html`
+  Static local progress dashboard generated from live JSONL counts.
+- `Obsidian/`
+  Human-readable project memory layer and parser/source map.
 
 ## Dual Chat Transcript Notes
 

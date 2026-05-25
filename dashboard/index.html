@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Training Tests Progress</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <p class="section-label">Dataset architecture dashboard</p>
+        <h1>AI Training Tests</h1>
+      </div>
+      <dl class="generated-stamp">
+        <dt>Generated</dt>
+        <dd id="generated-at">-</dd>
+      </dl>
+    </header>
+
+    <main>
+      <section class="summary-grid" id="summary-cards" aria-label="Dataset totals"></section>
+
+      <section class="dashboard-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Final source coverage</p>
+            <h2>Sources And Parser Status</h2>
+          </div>
+          <p id="source-count" class="muted"></p>
+        </div>
+        <div id="source-tables" class="table-stack"></div>
+      </section>
+
+      <section class="two-column">
+        <div class="dashboard-section">
+          <div class="section-heading compact">
+            <div>
+              <p class="section-label">Review queue</p>
+              <h2>What's Next</h2>
+            </div>
+          </div>
+          <div id="next-sources" class="notice-list"></div>
+        </div>
+
+        <div class="dashboard-section warning-section">
+          <div class="section-heading compact">
+            <div>
+              <p class="section-label">Cleanup gate</p>
+              <h2>Warnings</h2>
+            </div>
+          </div>
+          <div id="cleanup-notices" class="notice-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="project-progress-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

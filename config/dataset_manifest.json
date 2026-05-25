@@ -1,0 +1,203 @@
+{
+  "generated_from": "live JSONL counts should be computed by tools/dashboard/build_progress_data.py",
+  "goals": {
+    "buddhist_lines": 1200,
+    "occult_lines": 1200
+  },
+  "source_groups": {
+    "buddhist": {
+      "label": "Buddhist",
+      "target_lines": 1200
+    },
+    "occult": {
+      "label": "Occult / Esoteric",
+      "target_lines": 1200
+    }
+  },
+  "final_datasets": {
+    "buddhist": {
+      "family": "buddhist",
+      "label": "Buddhist final dataset",
+      "path": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl"
+    },
+    "occult": {
+      "family": "occult",
+      "label": "Occult / esoteric final dataset",
+      "path": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl"
+    },
+    "combined": {
+      "family": "combined",
+      "label": "Combined final dataset",
+      "path": "review_outputs/full_dialogue_dataset/full_combined_dialogue_dataset.jsonl"
+    }
+  },
+  "sources": [
+    {
+      "family": "buddhist",
+      "source": "Itivuttaka",
+      "source_file": "source_texts/buddhist/clean/itivuttaka_thanissaro.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_itivuttaka.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_itivuttaka.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "Majjhima Nikaya",
+      "source_file": "source_texts/buddhist/clean/majjhima_nikaya_dhammatalks_selected.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_majjhima_nikaya.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_majjhima_nikaya.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "Milinda Panha",
+      "source_file": "oritiginal text/Milinda Panha.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/build_pilot_dialogue_dataset.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/base_dialogue_dataset.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "Platform Sutra",
+      "source_file": "oritiginal text/Platform Sutra .txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/build_pilot_dialogue_dataset.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/base_dialogue_dataset.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "Sutta Nipata",
+      "source_file": "source_texts/buddhist/clean/sutta_nipata.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_sutta_nipata.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_sutta_nipata.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "The Diamond Sutra",
+      "source_file": "source_texts/buddhist/diamond_sutra_gutenberg.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_diamond_sutra.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_diamond_sutra.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "The Gateless Gate",
+      "source_file": "source_texts/buddhist/gateless_gate_wikisource.html",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_gateless_gate.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_gateless_gate.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "Udana",
+      "source_file": "source_texts/buddhist/clean/udana.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_udana.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_udana.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "Vimalakirti Nirdesa Sutra",
+      "source_file": "source_texts/buddhist/clean/vimalakirti_nirdesa_sutra.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_vimalakirti.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_vimalakirti.md",
+      "status": "final"
+    },
+    {
+      "family": "buddhist",
+      "source": "Zen Koans Database",
+      "source_file": "source_texts/buddhist/clean/zen_koans_database.json",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_zen_koans_database.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_zen_koans_database.md",
+      "status": "final"
+    },
+    {
+      "family": "occult",
+      "source": "Asclepius",
+      "source_file": "oritiginal text/Asclepius.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_asclepius.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_asclepius.md",
+      "status": "final"
+    },
+    {
+      "family": "occult",
+      "source": "The Corpus Hermeticum",
+      "source_file": "oritiginal text/The Corpus Hermeticum.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/build_pilot_dialogue_dataset.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/base_dialogue_dataset.md",
+      "status": "final"
+    },
+    {
+      "family": "occult",
+      "source": "The Key to Theosophy",
+      "source_file": "oritiginal text/the_key-to-theosophy.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/build_pilot_dialogue_dataset.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/base_dialogue_dataset.md",
+      "status": "final"
+    }
+  ],
+  "next_sources": [
+    {
+      "family": "buddhist",
+      "source": "Blue Cliff Record",
+      "reason": "Candidate outputs already exist but are not final.",
+      "current_artifact": "review_outputs/new_buddhist_sources/blue_cliff_record_ode_dialogue.jsonl"
+    },
+    {
+      "family": "buddhist",
+      "source": "Dhammapada Commentary",
+      "reason": "Candidate review samples exist and need parser/sample review before promotion.",
+      "current_artifact": "review_outputs/new_buddhist_sources/dhammapada_commentary_dialogue_review_sample.md"
+    },
+    {
+      "family": "buddhist",
+      "source": "Udana direct dialogue rows",
+      "reason": "Current final set uses exclamation rows only; direct dialogue candidates can be reviewed separately.",
+      "current_artifact": "review_outputs/new_buddhist_sources/udana_dialogue.jsonl"
+    },
+    {
+      "family": "occult",
+      "source": "Expanded Asclepius",
+      "reason": "Current final set has 25 rows; additional clean dialogue may be extractable.",
+      "current_artifact": "review_outputs/new_esoteric_sources/asclepius_dialogue.jsonl"
+    }
+  ],
+  "stale_docs": [
+    "README.md",
+    "CODE_EXPLAINED.md",
+    "project_intake_document.md",
+    "project_memory.md",
+    "review_outputs/full_dialogue_dataset/README.md"
+  ],
+  "cleanup_notices": [
+    {
+      "path": "ai_training_tests.egg-info/",
+      "reason": "Generated package metadata should not be tracked.",
+      "status": "not approved"
+    },
+    {
+      "path": "review_outputs/full_dialogue_dataset/full_dialogue_dataset.jsonl",
+      "reason": "Appears to overlap with full_combined_dialogue_dataset.jsonl; compare hashes before any cleanup.",
+      "status": "not approved"
+    },
+    {
+      "path": "review_outputs/new_buddhist_sources/zen_koans_database_dialogue.jsonl",
+      "reason": "Appears to overlap with zen_koans_database_clean_dialogue.jsonl; compare hashes and references before cleanup.",
+      "status": "not approved"
+    }
+  ]
+}

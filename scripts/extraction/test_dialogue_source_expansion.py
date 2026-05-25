@@ -68,24 +68,27 @@ class VimalakirtiParserTest(unittest.TestCase):
 
     def test_conversation_window_stays_with_local_exchange(self) -> None:
         turns = [
-            VimalakirtiTurn("Ratnakara", "Very good, Lord,", 376, 377),
+            VimalakirtiTurn("Ratnakara", "Very good, Lord,", 376, 377, 0),
             VimalakirtiTurn(
                 "The Buddha",
                 "What do you think, Shariputra? Is it because the sun and moon are impure that those blind from birth do not see them?",
                 500,
                 502,
+                1,
             ),
             VimalakirtiTurn(
                 "Shariputra",
                 "No, Lord. It is not so. The fault lies with those blind from birth, and not with the sun and moon.",
                 505,
                 506,
+                2,
             ),
             VimalakirtiTurn(
                 "The Buddha",
                 "In the same way, Shariputra, the fact that some living beings do not behold the splendid display of virtues of the Buddha-field of the Tathágata is due to their own ignorance.",
                 509,
                 512,
+                3,
             ),
         ]
 

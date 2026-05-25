@@ -2,13 +2,13 @@
 
 ## Project Memory
 
-This repository uses `hermes_memory_vault/` as its human-readable project memory layer.
+This repository uses `Obsidian/` as its human-readable project memory layer.
 
 Primary entrypoints:
 
-- `hermes_memory_vault/00_Index.md`
-- `hermes_memory_vault/Hermes_Memory_Protocol.md`
-- `hermes_memory_vault/Projects/AI_Training_Tests.md`
+- `Obsidian/00_Index.md`
+- `Obsidian/Hermes_Memory_Protocol.md`
+- `Obsidian/Projects/AI_Training_Tests.md`
 
 ## When To Read The Vault
 
@@ -52,4 +52,4 @@ When updating, prefer summaries and links over copied content.
 
 For Codex/Obsidian workflow guidance, see:
 
-- `hermes_memory_vault/Projects/Codex_Obsidian_Best_Practices.md`
+- `Obsidian/Projects/Codex_Obsidian_Best_Practices.md`

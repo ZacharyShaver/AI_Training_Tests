@@ -5,3 +5,15 @@ __pycache__/
 .venv/
 */.venv/
 hermes_memory_vault/
+.vscode
+.claude
+
+# Generated package metadata, including ai_training_tests.egg-info/
+*.egg-info/
+
+# Generated/local project state
+.codegraph/codegraph.db
+Obsidian/.obsidian/workspace.json
+
+.*_cache
+*__pycache__

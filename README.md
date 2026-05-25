@@ -38,7 +38,7 @@ In simple terms:
 The main rebuild command is:
 
 ```bash
-PYTHONPATH=scripts/extraction python3 scripts/extraction/build_full_dialogue_outputs.py
+python scripts/extraction/build_full_dialogue_outputs.py
 ```
 
 That script rebuilds the current full dialogue dataset by running several smaller
@@ -78,9 +78,9 @@ review_outputs/full_dialogue_dataset/
 Current generated full dataset counts:
 
 ```text
-Combined: 862 rows, 779 train, 83 eval
-Buddhist: 464 rows, 420 train, 44 eval
-Esoteric: 398 rows, 359 train, 39 eval
+Combined: 1,277 rows, 1,156 train, 121 eval
+Buddhist: 854 rows, 774 train, 80 eval
+Occult / esoteric: 423 rows, 382 train, 41 eval
 ```
 
 Current combined sources:
@@ -88,12 +88,17 @@ Current combined sources:
 ```text
 The Key to Theosophy: 370 rows
 The Corpus Hermeticum: 28 rows
+Asclepius: 25 rows
 Milinda Panha: 73 rows
 Platform Sutra: 19 rows
+Itivuttaka: 107 rows
+Majjhima Nikaya: 168 rows
 The Gateless Gate: 129 rows
 The Diamond Sutra: 83 rows
 Udana: 80 rows
 Sutta Nipata: 80 rows
+Vimalakirti Nirdesa Sutra: 17 rows
+Zen Koans Database: 98 rows
 ```
 
 The main rebuild command now regenerates every source currently included in the
@@ -103,8 +108,10 @@ full combined dataset before writing splits and review samples.
 
 ### `scripts/extraction/`
 
-The main dataset-building code. These scripts read source texts and create
-training examples.
+Compatibility entrypoints for the extraction code. Shared domain modules, review
+policy, JSONL helpers, and the first migrated parser now live under
+`src/ai_training_tests/`; the old script paths remain as wrappers while the
+package migration continues.
 
 Most important files:
 
@@ -123,12 +130,32 @@ Most important files:
   Builds Sutta Nipata rows. The full rebuild command regenerates this output
   before combining datasets.
 - `parse_itivuttaka.py`
-  Builds Itivuttaka review rows. These outputs exist, but they are not currently
-  included in the full combined dataset.
+  Builds Itivuttaka rows included in the current Buddhist dataset.
+- `parse_majjhima_nikaya.py`
+  Builds Majjhima Nikaya rows included in the current Buddhist dataset.
+- `parse_asclepius.py`
+  Compatibility wrapper for `ai_training_tests.extraction.parsers.asclepius`.
 - `split_dialogue_dataset.py`
   Writes train/eval splits.
 - `make_review_sample.py`
   Writes readable Markdown review samples.
+
+### `src/ai_training_tests/`
+
+Packaged Python code introduced for the architecture migration:
+
+- `domain/dialogue_schema.py`
+  Pydantic validation for the three-message dialogue row format.
+- `domain/source_manifest.py`
+  Approved source manifest used by rebuild and split logic.
+- `extraction/common/`
+  Shared JSONL, text-cleaning, and review-sample helpers.
+- `extraction/review/review_policy.py`
+  Structural review policy used by machine-review packets.
+- `extraction/parsers/asclepius.py`
+  First migrated source parser.
+
+Existing `scripts/extraction/*.py` paths are preserved for compatibility.
 
 ### `review_outputs/`
 
@@ -228,13 +255,13 @@ These files show the prompt and target answer in a human-readable way.
 Run the currently available parser unittest from the repository root:
 
 ```bash
-python3 -B scripts/extraction/test_parse_zen_koans_database.py
+python -m pytest tests -q
 ```
 
 Regenerate the dataset validation report:
 
 ```bash
-PYTHONPATH=scripts/extraction python3 -B scripts/extraction/validate_dialogue_dataset.py --output-md review_outputs/full_dialogue_dataset/dialogue_dataset_validation_report.md
+python -B scripts/extraction/validate_dialogue_dataset.py --output-md review_outputs/full_dialogue_dataset/dialogue_dataset_validation_report.md
 ```
 
 For dataset health, check `full_dialogue_dataset_splits.md` after each rebuild
@@ -249,9 +276,9 @@ and verify row counts, source coverage, and train/eval sizes before training.
   page noise.
 - Some source folders and file names contain spaces. Quote those paths in shell
   commands.
-- This repository currently has one lightweight unittest for the Zen Koans
-  parser, but no broader test suite or packaging file. Most scripts are run
-  directly with `python3`.
+- The repository now has a lightweight pytest suite and a package spine under
+  `src/ai_training_tests/`, while most parser entrypoints can still be run
+  directly through `scripts/extraction/`.
 
 For a slower, more detailed explanation of how the code works, read
 `CODE_EXPLAINED.md`.

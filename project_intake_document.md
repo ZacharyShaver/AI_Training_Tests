@@ -15,18 +15,23 @@ The intended direction is to evolve from a prototype chat interface into a more 
 - The current canonical training outputs live in
   `review_outputs/full_dialogue_dataset/`.
 - Current generated full dataset counts:
-  - Combined: `862` rows, `779` train, `83` eval
-  - Buddhist: `464` rows, `420` train, `44` eval
-  - Esoteric: `398` rows, `359` train, `39` eval
+  - Combined: `1,277` rows, `1,156` train, `121` eval
+  - Buddhist: `854` rows, `774` train, `80` eval
+  - Occult / esoteric: `423` rows, `382` train, `41` eval
 - Current included source corpora:
   - The Key to Theosophy
-  - Corpus Hermeticum
+  - The Corpus Hermeticum
+  - Asclepius
   - Milinda Panha
   - Platform Sutra
+  - Itivuttaka
+  - Majjhima Nikaya
   - The Gateless Gate
   - The Diamond Sutra
   - Udana
   - Sutta Nipata
+  - Vimalakirti Nirdesa Sutra
+  - Zen Koans Database
 - The repository includes:
   - Direct-source dialogue JSONL outputs
   - Markdown review samples
@@ -74,13 +79,18 @@ This is not yet framed as a student/teacher pattern. It is closer to two interlo
 The project is currently grounded in a blend of traditions rather than one single lineage. The corpus spans Buddhist, Hermetic, and Theosophical texts.
 
 - Buddhist:
+  - Itivuttaka
+  - Majjhima Nikaya
   - Milinda Panha
   - Platform Sutra
   - The Gateless Gate
   - The Diamond Sutra
   - Udana
   - Sutta Nipata
+  - Vimalakirti Nirdesa Sutra
+  - Zen Koans Database
 - Hermetic / Theosophical:
+  - Asclepius
   - Corpus Hermeticum
   - The Key to Theosophy
 
@@ -228,3 +238,7 @@ This appears to be a longer-term incremental build rather than a one-week launch
 - Dual-model transcript converter: [build_dual_model_chat_datasets.py](/Users/wewlad/GitHub/AI_Training_Tests/scripts/data_prep/build_dual_model_chat_datasets.py)
 - Full cleaning pipeline: [build_clean_training_pipeline.py](/Users/wewlad/GitHub/AI_Training_Tests/scripts/data_prep/build_clean_training_pipeline.py)
 - Cleaned output summary: [summary.json](/Users/wewlad/GitHub/AI_Training_Tests/Training%20Data/cleaned_pipeline/summary.json)
+- Progress dashboard: `dashboard/index.html`
+- Dataset manifest: `config/dataset_manifest.json`
+- Package spine: `src/ai_training_tests/`
+- Project vault: `Obsidian/00_Index.md`
