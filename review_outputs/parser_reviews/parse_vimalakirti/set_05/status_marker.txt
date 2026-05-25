@@ -1,0 +1,6 @@
+parser: parse_vimalakirti.py
+set: set_05
+status: machine-approved
+seed: 20260527
+rows: 17
+sampled_rows: 10

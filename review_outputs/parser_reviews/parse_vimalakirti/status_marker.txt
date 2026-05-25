@@ -1,0 +1,3 @@
+status: machine-approved
+current_set: set_05
+consecutive_passes: 3

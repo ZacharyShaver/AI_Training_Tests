@@ -2,24 +2,36 @@
 
 ## Project Summary
 
-This project is a local AI dialogue system built around two philosophical agents that converse with each other in a bounded session. The current repository already contains extracted training corpora, transcript conversion scripts, a data cleaning pipeline, and a Streamlit prototype that runs alternating conversation turns through LM Studio.
+This project is a local AI dialogue system built around two philosophical agents
+that converse with each other in a bounded session. The current repository now
+centers on a direct-source dialogue dataset, with transcript conversion scripts,
+a legacy data cleaning pipeline, and a Streamlit prototype that runs alternating
+conversation turns through LM Studio.
 
 The intended direction is to evolve from a prototype chat interface into a more complete website experience while keeping model quality and data quality as the primary technical priority.
 
 ## Current Repository State
 
-- Training corpora already exist from:
+- The current canonical training outputs live in
+  `review_outputs/full_dialogue_dataset/`.
+- Current generated full dataset counts:
+  - Combined: `862` rows, `779` train, `83` eval
+  - Buddhist: `464` rows, `420` train, `44` eval
+  - Esoteric: `398` rows, `359` train, `39` eval
+- Current included source corpora:
   - The Key to Theosophy
   - Corpus Hermeticum
-  - Asclepius
   - Milinda Panha
   - Platform Sutra
+  - The Gateless Gate
+  - The Diamond Sutra
+  - Udana
+  - Sutta Nipata
 - The repository includes:
-  - Q&A extraction outputs
-  - Alpaca-style conversions
-  - MLX-style prompt/completion data
+  - Direct-source dialogue JSONL outputs
+  - Markdown review samples
   - Transcript-based dual-chat examples
-  - A cleaning pipeline that emits separate `model_a` and `model_b` train/valid splits
+  - A legacy cleaning pipeline for older Q&A/transcript data
 - Current interactive prototype:
   - Streamlit frontend
   - LM Studio OpenAI-compatible endpoint for inference
@@ -36,7 +48,11 @@ No explicit hardware profile is documented in the repository. The project memory
 
 ### 3. Training Data Status
 
-Training data is already prepared. The repository includes extracted Q&A corpora and transcript-based dialogue data. A cleaned pipeline has also been built to generate model-specific train/valid splits.
+Training data is prepared at the dataset level, but the project has not yet
+recorded completed fine-tuning runs or adapters. The active training-ready data
+is the direct-source dialogue dataset under `review_outputs/full_dialogue_dataset/`.
+The older Q&A cleaning pipeline remains in `scripts/data_prep/`, but its original
+`Training Data/*_qa.jsonl` inputs are not currently present in the workspace.
 
 ### 4. Training Method
 
@@ -60,9 +76,12 @@ The project is currently grounded in a blend of traditions rather than one singl
 - Buddhist:
   - Milinda Panha
   - Platform Sutra
+  - The Gateless Gate
+  - The Diamond Sutra
+  - Udana
+  - Sutta Nipata
 - Hermetic / Theosophical:
   - Corpus Hermeticum
-  - Asclepius
   - The Key to Theosophy
 
 ### 7. Names / Identities
@@ -193,10 +212,14 @@ This appears to be a longer-term incremental build rather than a one-week launch
 
 ## Recommended Immediate Next Steps
 
-1. Run actual LoRA/QLoRA training jobs for `model_a` and `model_b` using the cleaned pipeline outputs.
-2. Expand transcript-style dialogue data significantly, since current conversational examples are still sparse.
-3. Decide whether persona differentiation should remain rhetorical or become corpus-grounded by tradition.
-4. Keep Streamlit for short-term testing, but plan a later migration to a proper web frontend plus Python backend if public deployment is the goal.
+1. Run the full dialogue rebuild and validation pass before training.
+2. Keep the lightweight validation command focused on JSONL shape, duplicate record IDs,
+   source counts, target length buckets, and train/eval overlap.
+3. Review short-target records and license-sensitive sources before training.
+4. Run small LoRA/QLoRA experiments against combined, Buddhist-only, and
+   esoteric-only splits.
+5. Keep Streamlit for short-term testing, but plan a later migration to a proper
+   web frontend plus Python backend if public deployment is the goal.
 
 ## Key Project Artifacts
 

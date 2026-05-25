@@ -7,15 +7,32 @@ Build clean training data from philosophical and spiritual source texts, then pr
 ## Workspace Structure
 
 - Original source texts are in `/Users/wewlad/GitHub/AI_Training_Tests/oritiginal text/`
-- Most generated training data and helper scripts are in `/Users/wewlad/GitHub/AI_Training_Tests/Training Data/`
+- Current canonical generated datasets are in `/Users/wewlad/GitHub/AI_Training_Tests/review_outputs/full_dialogue_dataset/`
+- Older transcript and legacy cleaning artifacts are in `/Users/wewlad/GitHub/AI_Training_Tests/Training Data/`
 
-## Extracted Corpora
+## Current Dataset State
 
-- `corpus_hermeticum_qa.jsonl` and strict subset exist
-- `asclepius_qa.jsonl` and strict subset exist
-- `milinda_panha_qa.jsonl` and strict subset exist
-- `platform_sutra_qa.jsonl` and strict subset exist
-- `key_to_theosophy_qa.jsonl` and strict subset exist
+- Active training format is direct-source dialogue: `conversation so far -> next reply`.
+- Current full combined dataset has 862 rows: 779 train and 83 eval.
+- Current Buddhist split has 464 rows.
+- Current esoteric split has 398 rows.
+- The full dataset currently includes The Key to Theosophy, The Corpus Hermeticum, Milinda Panha, Platform Sutra, The Gateless Gate, The Diamond Sutra, Udana, and Sutta Nipata.
+- The main rebuild script regenerates the included source outputs before combining datasets.
+
+## Historical Q&A Corpora
+
+Earlier project notes referred to Q&A files such as:
+
+- `corpus_hermeticum_qa.jsonl`
+- `asclepius_qa.jsonl`
+- `milinda_panha_qa.jsonl`
+- `platform_sutra_qa.jsonl`
+- `key_to_theosophy_qa.jsonl`
+
+Those files are not currently present as active `Training Data/*_qa.jsonl`
+inputs in the workspace. The older Q&A pipeline remains useful if those files
+are restored, but the current canonical outputs are the direct-source dialogue
+splits in `review_outputs/full_dialogue_dataset/`.
 
 ## Important Lessons
 
@@ -27,40 +44,40 @@ Build clean training data from philosophical and spiritual source texts, then pr
 
 ## Training Data Conventions
 
-- Preferred core training format is clean `question -> answer` JSONL.
+- Preferred current core training format is direct-source `conversation so far -> next reply` JSONL.
+- Clean `question -> answer` JSONL remains useful if the older Q&A corpora are restored.
 - Dialogue transcripts should be treated as `conversation so far -> next reply`, not as ordinary Q&A.
 - Dual-chat transcripts are better as a secondary style dataset, not the main corpus.
-- Recommended mix: mostly doctrinal/Q&A data, with a smaller amount of dialogue-continuation data.
+- Recommended near-term path: validate and train against the direct-source dialogue splits first, then decide whether restored Q&A data should be mixed in.
 
 ## Scripts Added
 
-- `Training Data/streamlit_lmstudio_dual_chat.py`
+- `scripts/apps/streamlit_lmstudio_dual_chat.py`
   Streamlit app for dual-model local conversations via LM Studio.
-- `Training Data/convert_dual_chat_transcript.py`
+- `scripts/data_prep/convert_dual_chat_transcript.py`
   Converts LM Studio dual-chat transcript JSON into conversation-training JSONL.
-- `extract_key_to_theosophy_qa.py`
-  Extracts explicit `Enquirer/Theosophist` dialogue into training-ready JSONL.
-- Other extractor scripts exist for Hermeticum, Asclepius, Milinda Panha, and Platform Sutra.
+- `scripts/extraction/build_full_dialogue_outputs.py`
+  Main current rebuild command for the full direct-source dialogue dataset.
+- Source-specific parsers live under `scripts/extraction/`.
 
 ## Dual Chat Transcript Notes
 
-- Transcript file: `Training Data/lmstudio_dual_chat_transcript.json`
+- Transcript file: `Training Data/Test Conversations/lmstudio_dual_chat_transcript.json`
 - It contained 8 total messages, 4 from each participant, using model id `hermes_sage`
 - Main theme: reasoning, self-awareness, detachment, intuition, and wisdom
 - Transcript quality was only moderate; several turns looked truncated
 - Converted conversation-training file exists:
-  `Training Data/lmstudio_dual_chat_conversation_training.jsonl`
+  `Training Data/Test Conversations/lmstudio_dual_chat_conversation_training_generated.jsonl`
 
 ## Current Reusable Local Training Assets
 
-- `Training Data/lmstudio_dual_chat_conversation_training.jsonl`
-  Hand-shaped next-turn conversation training examples from current transcript
-- `Training Data/convert_dual_chat_transcript.py`
+- `Training Data/cleaned_pipeline/cleaned_dialogue/combined_messages.jsonl`
+  Small transcript-derived next-turn conversation examples
+- `scripts/data_prep/convert_dual_chat_transcript.py`
   Reusable converter for future dual-chat transcripts
 
 ## Local Training Recommendation
 
 - Prefer local LoRA/QLoRA over full fine-tuning for small datasets and limited hardware.
-- Use Q&A corpora as the primary training set.
-- Use dialogue-continuation data only as a supplemental style set.
-
+- Use the direct-source combined, Buddhist-only, and esoteric-only splits as the first training candidates.
+- Use transcript-derived dual-chat data only as a supplemental style set.

@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: ai-training-tests
+Version: 0.1.0
+Summary: Dataset extraction and review tooling for dialogue training data.
+Requires-Python: >=3.11
+Provides-Extra: dev
+Requires-Dist: pre-commit>=4.0.0; extra == "dev"
+Requires-Dist: pydantic>=2.7.0; extra == "dev"
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: ruff>=0.11.0; extra == "dev"

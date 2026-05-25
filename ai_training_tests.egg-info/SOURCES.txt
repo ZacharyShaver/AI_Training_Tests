@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+ai_training_tests.egg-info/PKG-INFO
+ai_training_tests.egg-info/SOURCES.txt
+ai_training_tests.egg-info/dependency_links.txt
+ai_training_tests.egg-info/requires.txt
+ai_training_tests.egg-info/top_level.txt
+tests/test_dialogue_schema.py

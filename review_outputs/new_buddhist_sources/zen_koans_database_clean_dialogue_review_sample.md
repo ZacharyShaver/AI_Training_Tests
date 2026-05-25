@@ -11,7 +11,7 @@ Rows by kind:
 
 - `zen_koans_database_clean_dialogue`: `98`
 
-Sampled rows: `12`
+Sampled rows: `10`
 
 ## Review Example 1: Zen Koans Database
 
@@ -40,100 +40,72 @@ That's fine, I will try it. Where can I find a teacher?
 
 ## Review Example 2: Zen Koans Database
 
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_stingy_in_teaching_10:1-16:nan-in`
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_open_your_own_treasure_house_2:1-6:baso`
 - Kind: `zen_koans_database_clean_dialogue`
-- Title: `Stingy In Teaching`
-- Source file: `stingy_in_teaching.html`
-- Target: `Participant B (Nan-in)`
-- Prompt words: `95`
-- Target words: `5`
+- Title: `Open Your Own Treasure House`
+- Source file: `open_your_own_treasure_house.html`
+- Target: `Participant B (Baso)`
+- Prompt words: `21`
+- Target words: `11`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant B (Nan-in): A physician should not waste time around here. Go home and take care of your patients.
-Participant A (Kusuda): My friend told me that when one learns Zen one loses his fear of death. Each time I come here you tell me to take care of my patients. I know that much. If that is your so-called Zen, I am not going to visit you anymore.
-Participant B (Nan-in): I have been too strict with you. Let me give you a koan.
+Participant A (Master): What do you seek?
+Participant A (Daiju): Enlightenment,
 
-Write Participant B (Nan-in)'s next reply.
+Write Participant B (Baso)'s next reply.
 ```
 
 ### Assistant Target
 
 ```text
-You are not in yet.
+You have your own treasure house. Why do you search outside?
 ```
 
 ## Review Example 3: Zen Koans Database
 
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_just_go_to_sleep_3:1-7:tekisui`
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_joshu_zen_3:1-6:joshu`
 - Kind: `zen_koans_database_clean_dialogue`
-- Title: `Just Go To Sleep`
-- Source file: `just_go_to_sleep.html`
-- Target: `Participant B (Tekisui)`
-- Prompt words: `48`
+- Title: `Joshu Zen`
+- Source file: `joshu_zen.html`
+- Target: `Participant B (Joshu)`
+- Prompt words: `44`
 - Target words: `5`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant B (Tekisui): What are you going to do when you get the temple rebuilt?
-Participant A (Gasan): When your sickness is over we want you to speak there,
-Participant A (Gasan): Then we will get someone else,
+Participant A (Student): If I haven't anything in my mind, what shall I do?
+Participant B (Joshu): Throw it out.
+Participant A (Questioner): But if I haven't anything, how can I throw it out?
 
-Write Participant B (Tekisui)'s next reply.
+Write Participant B (Joshu)'s next reply.
 ```
 
 ### Assistant Target
 
 ```text
-Suppose you cannot find anyone?
+Well, then carry it out.
 ```
 
 ## Review Example 4: Zen Koans Database
 
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_gates_of_paradise_2:1-8:warrior`
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_subjugation_of_a_ghost_1:1-10:man`
 - Kind: `zen_koans_database_clean_dialogue`
-- Title: `The Gates Of Paradise`
-- Source file: `the_gates_of_paradise.html`
-- Target: `Participant B (Warrior)`
-- Prompt words: `27`
-- Target words: `4`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (Soldier): Is there really a paradise and a hell?
-Participant A (Hakuin): Who are you?
-
-Write Participant B (Warrior)'s next reply.
-```
-
-### Assistant Target
-
-```text
-I am a samurai,
-```
-
-## Review Example 5: Zen Koans Database
-
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_tunnel_2:1-10:man`
-- Kind: `zen_koans_database_clean_dialogue`
-- Title: `The Tunnel`
-- Source file: `the_tunnel.html`
+- Title: `The Subjugation Of A Ghost`
+- Source file: `the_subjugation_of_a_ghost.html`
 - Target: `Participant B (Man)`
-- Prompt words: `49`
-- Target words: `9`
+- Prompt words: `89`
+- Target words: `8`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant A (Zenkai): I will give you my life willingly, Only let me finish this work. On the day it is completed, then you may kill me.
-Participant A (Zenkai): Now cut off my head, My work is done.
+Participant A (Master): Your former wife became a ghost and knows everything you do, Whatever you do or say, whatever you give your beloved, she knows. She must be a very wise ghost. Really you should admire such a ghost. The next time she appears, bargain with her. Tell her that she knows so much you can hide nothing from her, and that if she will answer you one question, you promise to break your engagement and remain single.
 
 Write Participant B (Man)'s next reply.
 ```
@@ -141,167 +113,141 @@ Write Participant B (Man)'s next reply.
 ### Assistant Target
 
 ```text
-How can I cut off my own teacher's head?
+What is the question I must ask her?
 ```
 
-## Review Example 6: Zen Koans Database
+## Review Example 5: Zen Koans Database
 
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_giver_should_be_thankful_2:1-9:seisetsu`
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_giver_should_be_thankful_1:1-9:umezu`
 - Kind: `zen_koans_database_clean_dialogue`
 - Title: `The Giver Should Be Thankful`
 - Source file: `the_giver_should_be_thankful.html`
-- Target: `Participant B (Seisetsu)`
-- Prompt words: `29`
-- Target words: `5`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant B (Seisetsu): All right. I will take it.
-Participant A (Umezu): In that sack are five hundred ryo,
-
-Write Participant B (Seisetsu)'s next reply.
-```
-
-### Assistant Target
-
-```text
-You told me that before,
-```
-
-## Review Example 7: Zen Koans Database
-
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_last_poem_of_hoshin_3:1-17:hoshin`
-- Kind: `zen_koans_database_clean_dialogue`
-- Title: `The Last Poem Of Hoshin`
-- Source file: `the_last_poem_of_hoshin.html`
-- Target: `Participant B (Hoshin)`
-- Prompt words: `84`
-- Target words: `3`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (Tokufu): You have been good to me. I shall leave tomorrow afternoon when the snow has stopped.
-Participant B (Hoshin): Yes, I will show you what I can do seven days from now.
-Participant B (Hoshin): Seven days ago, I said I was going to leave you. It is customary to write a farewell poem, but I am neither a poet or a calligrapher. Let one of you inscribe my last words.
-
-Write Participant B (Hoshin)'s next reply.
-```
-
-### Assistant Target
-
-```text
-Are you ready?
-```
-
-## Review Example 8: Zen Koans Database
-
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_not_far_from_buddhahood_2:1-6:gasan`
-- Kind: `zen_koans_database_clean_dialogue`
-- Title: `Not Far From Buddhahood`
-- Source file: `not_far_from_buddhahood.html`
-- Target: `Participant B (Gasan)`
-- Prompt words: `28`
-- Target words: `9`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (Student): Have you ever read the Christian Bible?
-Participant B (Gasan): No, read it to me,
-
-Write Participant B (Gasan)'s next reply.
-```
-
-### Assistant Target
-
-```text
-Whoever uttered those words I consider an enlightened man.
-```
-
-## Review Example 9: Zen Koans Database
-
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_taste_of_banzo_sword_2:1-17:matajuro`
-- Kind: `zen_koans_database_clean_dialogue`
-- Title: `The Taste Of Banzo Sword`
-- Source file: `the_taste_of_banzo_sword.html`
-- Target: `Participant B (Matajuro)`
-- Prompt words: `34`
-- Target words: `30`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (Banzo): You wish to learn swordsmanship under my guidance? You cannot fulfill the requirements.
-Participant A (Banzo): The rest of your life,
-
-Write Participant B (Matajuro)'s next reply.
-```
-
-### Assistant Target
-
-```text
-I cannot wait that long, I am willing to pass through any hardship if only you will teach me. If I become your devoted servant, how long might it be?
-```
-
-## Review Example 10: Zen Koans Database
-
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_dead_man_answer_3:1-6:teacher`
-- Kind: `zen_koans_database_clean_dialogue`
-- Title: `The Dead Man Answer`
-- Source file: `the_dead_man_answer.html`
-- Target: `Participant B (Teacher)`
-- Prompt words: `63`
+- Target: `Participant B (Umezu)`
+- Prompt words: `19`
 - Target words: `7`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant B (Teacher): You are not working hard enough, You are too attached to food, wealth, things, and that sound. It would be better if you died. That would solve the problem.
-Participant B (Teacher): You are dead all right, But how about that sound?
-Participant A (Mamiya): I haven't solved that yet,
+Participant A (Seisetsu): All right. I will take it.
 
-Write Participant B (Teacher)'s next reply.
+Write Participant B (Umezu)'s next reply.
 ```
 
 ### Assistant Target
 
 ```text
-Dead men do not speak, Get out!
+In that sack are five hundred ryo,
 ```
 
-## Review Example 11: Zen Koans Database
+## Review Example 6: Zen Koans Database
 
-- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_stingy_artist_1:1-15:girl`
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_last_poem_of_hoshin_4:1-17:disciple`
 - Kind: `zen_koans_database_clean_dialogue`
-- Title: `The Stingy Artist`
-- Source file: `the_stingy_artist.html`
-- Target: `Participant B (Girl)`
-- Prompt words: `18`
+- Title: `The Last Poem Of Hoshin`
+- Source file: `the_last_poem_of_hoshin.html`
+- Target: `Participant B (Disciple)`
+- Prompt words: `71`
+- Target words: `6`
+
+### User Prompt
+
+```text
+Conversation so far:
+Participant A (Hoshin): Yes, I will show you what I can do seven days from now.
+Participant A (Hoshin): Seven days ago, I said I was going to leave you. It is customary to write a farewell poem, but I am neither a poet or a calligrapher. Let one of you inscribe my last words.
+Participant A (Hoshin): Are you ready?
+
+Write Participant B (Disciple)'s next reply.
+```
+
+### Assistant Target
+
+```text
+Master, we are one line short.
+```
+
+## Review Example 7: Zen Koans Database
+
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_reciting_sutras_1:1-5:priest`
+- Kind: `zen_koans_database_clean_dialogue`
+- Title: `Reciting Sutras`
+- Source file: `reciting_sutras.html`
+- Target: `Participant B (Priest)`
+- Prompt words: `23`
 - Target words: `15`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant A (Gessen): How much can you pay?
+Participant A (Farmer): Do you think my wife will gain merit from this?
 
-Write Participant B (Girl)'s next reply.
+Write Participant B (Priest)'s next reply.
 ```
 
 ### Assistant Target
 
 ```text
-Whatever you charge, but I want you to do the work in front of me.
+Not only your wife, but all sentient beings will benefit from the recitation of sutras,
 ```
 
-## Review Example 12: Zen Koans Database
+## Review Example 8: Zen Koans Database
+
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_the_taste_of_banzo_sword_6:1-17:banzo`
+- Kind: `zen_koans_database_clean_dialogue`
+- Title: `The Taste Of Banzo Sword`
+- Source file: `the_taste_of_banzo_sword.html`
+- Target: `Participant B (Banzo)`
+- Prompt words: `72`
+- Target words: `29`
+
+### User Prompt
+
+```text
+Conversation so far:
+Participant A (Matajuro): My father is getting old, and soon I must take care of him, If I work far more intensively, how long would it take me?
+Participant B (Banzo): Oh, maybe thirty years,
+Participant A (Matajuro): Why is that? First you say ten and now thirty years. I will undergo any hardship to master this art in the shortest time!
+
+Write Participant B (Banzo)'s next reply.
+```
+
+### Assistant Target
+
+```text
+Well, in that case you will have to remain with me for seventy years. A man in such a hurry as you are to get results seldom learns quickly.
+```
+
+## Review Example 9: Zen Koans Database
+
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_temper_3:1-6:student`
+- Kind: `zen_koans_database_clean_dialogue`
+- Title: `Temper`
+- Source file: `temper.html`
+- Target: `Participant B (Student)`
+- Prompt words: `48`
+- Target words: `3`
+
+### User Prompt
+
+```text
+Conversation so far:
+Participant B (Student): Master, I have an ungovernable temper. How can I cure it?
+Participant A (Bankei): You have something very strange, Let me see what you have.
+Participant A (Bankei): When can you show it to me?
+
+Write Participant B (Student)'s next reply.
+```
+
+### Assistant Target
+
+```text
+It arises unexpectedly,
+```
+
+## Review Example 10: Zen Koans Database
 
 - Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_gudo_and_the_emperor_4:1-8:gudo`
 - Kind: `zen_koans_database_clean_dialogue`

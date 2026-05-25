@@ -1,6 +1,6 @@
 # Full Combined Dialogue Dataset Review Sample
 
-Sampled rows: `14`
+Sampled rows: `12`
 Source dataset: `/Users/wewlad/GitHub/AI_Training_Tests/review_outputs/full_dialogue_dataset/full_combined_dialogue_dataset.jsonl`
 
 ## Review Example 1: The Key to Theosophy
@@ -30,19 +30,19 @@ Write Participant B's next reply.
 
 ## Review Example 2: The Key to Theosophy
 
-- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:583-589:theosophist`
+- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:1127-1137:theosophist`
 - Kind: `explicit_next_reply`
-- Lines: `the_key-to-theosophy.txt:583-589`
+- Lines: `the_key-to-theosophy.txt:1127-1137`
 - Target: `Participant B (Theosophist)`
-- Target words: `69`
+- Target words: `284`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant A (Enquirer): But is a man expelled, or resigning, from the section free to reveal anything he may have learned, or to break any clause of the pledge he has taken?
-Participant B (Theosophist): Certainly not. His expulsion or resignation only relieves him from the obligation of obedience to the teacher, and from that of taking an active part in the work of the Society, but surely not from the sacred pledge of secrecy.
-Participant A (Enquirer): But is this reasonable and just?
+Participant A (Enquirer): I have read a good deal upon the subject, and it seems to me that the notions of the older philosophers differed a great deal from those of the mediaeval Kabalists, though they do agree in some particulars.
+Participant B (Theosophist): The most substantial difference between them and us is this. While we believe with the Neo-Platonists and the Eastern teachings that the spirit (Atma) never descends hypostatically into the living man, but only showers more or less its radiance on the inner man (the psychic and spiritual compound of the astral) principles, the Kabalists maintain that the human Spirit, detaching itself from the ocean of light and Universal Spirit, enters man's Soul, where it remains throughout life imprisoned in the astral capsule. All Christian Kabalists still maintain the same, as they are unable to break quite loose from their anthropomorphic and Biblical doctrines.
+Participant A (Enquirer): And what do you say?
 
 Write Participant B's next reply.
 ```
@@ -50,24 +50,24 @@ Write Participant B's next reply.
 ### Assistant Target
 
 ```text
-Most assuredly. To any man or woman with the slightest honourable feeling a pledge of secrecy taken even on one's word of honour, much more to one's Higher Self - the God within - is binding till death. And though he may leave the Section and the Society, no man or woman of honour will think of attacking or injuring a body to which he or she has been so pledged.
+We say that we only allow the presence of the radiation of Spirit (or Atma) in the astral capsule, and so far only as that spiritual radiancy is concerned. We say that man and Soul have to conquer their immortality by ascending towards the unity with which, if successful, they will be finally linked and into which they are finally, so to speak, absorbed. The individualization of man after death depends on the spirit, not on his soul and body. Although the word "personality," in the sense in which it is usually understood, is an absurdity if applied literally to our immortal essence, still the latter is, as our individual Ego, a distinct entity, immortal and eternal, per se. It is only in the case of black magicians or of criminals beyond redemption, criminals who have been such during a long series of lives - that the shining thread, which links the spirit to the personal soul from the moment of the birth of the child, is violently snapped, and the disembodied entity becomes divorced from the personal soul, the latter being annihilated without leaving the smallest impression of itself on the former. If that union between the lower, or personal Manas, and the individual reincarna...
 ```
 
 ## Review Example 3: The Key to Theosophy
 
-- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:942-950:theosophist`
+- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:2194-2205:theosophist`
 - Kind: `explicit_next_reply`
-- Lines: `the_key-to-theosophy.txt:942-950`
+- Lines: `the_key-to-theosophy.txt:2194-2205`
 - Target: `Participant B (Theosophist)`
-- Target words: `36`
+- Target words: `259`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant A (Enquirer): And therefore you have implicit faith in them?
-Participant B (Theosophist): Faith is a word not to be found in theosophical dictionaries: we say knowledge based, on observation and experience. There is this difference, however, that while the observation and experience of physical science lead the Scientists to about as many "working" hypotheses as there are minds to evolve them, our knowledge consents to add to its lore only those facts which have become undeniable, and which are fully and absolutely demonstrated. We have no two beliefs or hypotheses on the same subject.
-Participant A (Enquirer): Is it on such data that you came to accept the strange theories we find in Esoteric Buddhism?
+Participant A (Enquirer): What is it?
+Participant B (Theosophist): One is human credulity and superstition, the other human belief inside of human credulity.. is a power almost infinite, a holy faith capable of apprehending the supremest truths of all existence." Those who limit that "credulity" to human authoritative dogmas alone, will never fathom that power nor even perceive it in their natures. It is stuck fast to the external plane and is unable to bring forth into play the essence that rules it; for to do this they have to claim their right of private judgment, and this they never dare to do.
+Participant A (Enquirer): And is it that "intuition" which forces you to reject God as a personal Father, Ruler and Governor of the Universe?
 
 Write Participant B's next reply.
 ```
@@ -75,46 +75,24 @@ Write Participant B's next reply.
 ### Assistant Target
 
 ```text
-Just so. These theories may be slightly incorrect in their minor details, and even faulty in their exposition by lay students; they are facts in nature, nevertheless, and come nearer the truth than any scientific hypothesis.
+Precisely. We believe in an ever unknowable Principle, because blind aberration alone can make one maintain that the Universe, thinking man, and all the marvels contained even in the world of matter, could have grown without some intelligent powers to bring about the extraordinarily wise arrangement of all its parts. Nature may err, and often does, in its details and the external manifestations of its materials, never in its inner causes and results. Ancient pagans held on this question far more philosophical views than modern philosophers, whether Agnostics, Materialists or Christians; and no pagan writer has ever yet advanced the proposition that cruelty and mercy are not finite feelings, and can therefore be made the attributes of an infinite god. Their gods, therefore, were all finite. The Siamese author of the Wheel of the Law, expresses the same idea about your personal god as we do; he says (p. 25) - "A Buddhist might believe in the existence of a god, sublime above all human qualities and attributes - a perfect god, above love, and hatred, and jealousy, calmly resting in a quietude that nothing could disturb, and of such a god he would speak no disparagement, not from a...
 ```
 
 ## Review Example 4: The Key to Theosophy
 
-- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:1540-1549:theosophist`
+- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:2902-2910:theosophist`
 - Kind: `explicit_next_reply`
-- Lines: `the_key-to-theosophy.txt:1540-1549`
+- Lines: `the_key-to-theosophy.txt:2902-2910`
 - Target: `Participant B (Theosophist)`
-- Target words: `120`
+- Target words: `236`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant A (Enquirer): There is something in your argument. I confess to having never seen it in this light.
-Participant B (Theosophist): Just so, and one must be selfish to the core and utterly devoid of the sense of retributive justice, to have ever imagined such a thing. We are with those whom we have lost in material form, and far, far nearer to them now, than when they were alive. And it is not only in the fancy of the Devachanee, as some may imagine, but in reality. For pure divine love is not merely the blossom of a human heart, but has its roots in eternity. Spiritual holy love is immortal, and Karma brings sooner or later all those who loved each other with such a spiritual affection to incarnate once more in the same family group. Again we say that love beyond the grave, illusion though you may call it, has a magic and divine potency which reacts on the living. A mother's Ego filled with love for the imaginary children it sees near itself, living a life of happiness, as real to it as when on earth - that love will always be felt by the children in flesh. It will manifest in their dreams, and often in various events - in providential protections...
-```
-
-### Assistant Target
-
-```text
-Yes, there is a case, and even two exceptions to the rule. The first exception is during the few days that follow immediately the death of a person and before the Ego passes into the Devachanic state. Whether any living mortal, save a few exceptional cases - (when the intensity of the desire in the dying person to return for some purpose forced the higher consciousness to remain awake, and therefore it was really the individuality, the "Spirit" that communicated) - has derived much benefit from the return of the spirit into the objective plane is another question. The spirit is dazed after death and falls very soon into what we call "predevachanic unconsciousness." The second exception is found in the Nirmanakayas.
-```
-
-## Review Example 5: The Key to Theosophy
-
-- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:1945-1951:theosophist`
-- Kind: `explicit_next_reply`
-- Lines: `the_key-to-theosophy.txt:1945-1951`
-- Target: `Participant B (Theosophist)`
-- Target words: `35`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (Enquirer): And we keep on incarnating in new personalities all the time?
-Participant B (Theosophist): Most assuredly so; because this life-cycle or period of incarnation may be best compared to human life. As each such life is composed of days of activity separated by nights of sleep or of inaction, so, in the incarnation-cycle, an active life is followed by a Devachanic rest.
-Participant A (Enquirer): And it is this succession of births that is generally defined as re-incarnation?
+Participant A (Enquirer): Is it true that these men inspire some of your writers, and that many, if not all, of your Theosophical works were written under their dictation?
+Participant B (Theosophist): Some have. There are passages entirely dictated by them and verbatim, but in most cases they only inspire the ideas and leave the literary form to the writers.
+Participant A (Enquirer): But this in itself is miraculous; is, in fact, a miracle. How can they do it?
 
 Write Participant B's next reply.
 ```
@@ -122,110 +100,10 @@ Write Participant B's next reply.
 ### Assistant Target
 
 ```text
-Just so. It is only through these births that the perpetual progress of the countless millions of Egos toward final perfection and final rest (as long as was the period of activity) can be achieved.
+My dear Sir, you are labouring under a great mistake, and it is science itself that will refute your arguments at no distant day. Why should it be a "miracle," as you call it? A miracle is supposed to mean some operation which is supernatural, whereas there is really nothing above or beyond NATURE and Nature's laws. Among the many forms of the "miracle" which have come under modern scientific recognition, there is Hypnotism, and one phase of its power is known as "Suggestion," a form of thought transference, which has been successfully used in combating particular physical diseases, etc. The time is not far distant when the World of Science will be forced to acknowledge that there exists as much interaction between one mind and another, no matter at what distance, as between one body and another in closest contact. When two minds are sympathetically related, and the instruments through which they function are tuned to respond magnetically and electrically to one another, there is nothing which will prevent the transmission of thoughts from one to the other, at will; for since the mind is not of a tangible nature, that distance can divide it from the subject of its contemplation,...
 ```
 
-## Review Example 6: The Key to Theosophy
-
-- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:2382-2388:theosophist`
-- Kind: `explicit_next_reply`
-- Lines: `the_key-to-theosophy.txt:2382-2388`
-- Target: `Participant B (Theosophist)`
-- Target words: `127`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (Enquirer): And what may be the duty of a Theosophist to himself?
-Participant B (Theosophist): To control and conquer, through the Higher, the lower self. To purify himself inwardly and morally; to fear no one, and nought, save the tribunal of his own conscience. Never to do a thing by halves; i. e., if he thinks it the right thing to do, let him do it openly and boldly, and if wrong, never touch it at all. It is the duty of a Theosophist to lighten his burden by thinking of the wise aphorism of Epictetus, who says: "Be not diverted from your duty by any idle reflection the silly world may make upon you, for their censures are not in your power, and consequently should not be any part of your concern."
-Participant A (Enquirer): But suppose a member of your Society should plead inability to practise altruism by other people, on the ground that "charity begins at home"; urging that he is too busy, or too poor, to benefit mankind or even any of its units - what are your rules in such a case?
-
-Write Participant B's next reply.
-```
-
-### Assistant Target
-
-```text
-No man has a right to say that he can do nothing for others, on any pretext whatever. "By doing the proper duty in the proper place, a man may make the world his debtor," says an English writer. A cup of cold water given in time to a thirsty wayfarer is a nobler duty and more worth, than a dozen of dinners given away, out of season, to men who can afford to pay for them. No man who has not got it in him will ever become a Theosophist; but he may remain a member of our Society all the same. We have no rules by which we could force any man to become a practical Theosophist, if he does not desire to be one.
-```
-
-## Review Example 7: The Key to Theosophy
-
-- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:2675-2681:theosophist`
-- Kind: `explicit_next_reply`
-- Lines: `the_key-to-theosophy.txt:2675-2681`
-- Target: `Participant B (Theosophist)`
-- Target words: `104`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (Enquirer): According to this view, the wealthier "dullards" have to work even harder than their poorer fellows?
-Participant B (Theosophist): It is so. But, strange to say, the faithful of the cult of the "Survival of the fittest" do not practice their creed; for their whole exertion is to make the naturally unfit supplant the fit. Thus, by bribes of large sums of money, they allure the best teachers from their natural pupils to mechanicalise their naturally unfit progeny into professions which they uselessly overcrowd.
-Participant A (Enquirer): And you attribute all this to what?
-
-Write Participant B's next reply.
-```
-
-### Assistant Target
-
-```text
-All this is owing to the perniciousness of a system which turns out goods to order, irrespective of the natural proclivities and talents of the youth. The poor little candidate for this progressive paradise of learning, comes almost straight from the nursery to the treadmill of a preparatory school for sons of gentlemen. Here he is immediately seized upon by the workmen of the materio-intellectual factory, and crammed with Latin, French and Greek Accidence, Dates and Tables, so that if he have any natural genius it is rapidly squeezed out of him by the rollers of what Carlyle has so well called "dead vocables."
-```
-
-## Review Example 8: The Key to Theosophy
-
-- Record ID: `the-key-to-theosophy-txt:explicit_next_reply:2974-2982:theosophist`
-- Kind: `explicit_next_reply`
-- Lines: `the_key-to-theosophy.txt:2974-2982`
-- Target: `Participant B (Theosophist)`
-- Target words: `128`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (Enquirer): This is complimentary. But do you not think that it would have done real good to the cause of Theosophy, if she had authoritatively disproved the whole thing once for all?
-Participant B (Theosophist): Perhaps. But do you believe that any English jury or judge would have ever admitted the reality of psychic phenomena, even if entirely unprejudiced beforehand? And when you remember that they would have been set against us already by the "Russian Spy" scare, the charge of Atheism and infidelity, and all the other calumnies that have been circulated against us, you cannot fail to see that such an attempt to obtain justice in a Court of Law would have been worse than fruitless! All this the Psychic Researchers knew well, and they took a base and mean advantage of their position to raise themselves above our heads and save themselves at our expense.
-Participant A (Enquirer): The S. P. R. now denies completely the existence of the Mahatmas. They say that from beginning to end they were a romance which Madame Blavatsky has woven from her own brain?
-
-Write Participant B's next reply.
-```
-
-### Assistant Target
-
-```text
-Well, she might have done many things less clever than this. At any rate, we have not the slightest objection to this theory. As she always says now, she almost prefers that people should not believe in the Masters. She declares openly that she would rather people should seriously think that the only Mahatmaland is the grey matter of her brain, and that, in short, she has evolved them out of the depths of her own inner consciousness, than that their names and grand ideal should be so infamously desecrated as they are at present. At first she used to protest indignantly against any doubts as to their existence. Now she never goes out of her way to prove or disprove it. Let people think what they like.
-```
-
-## Review Example 9: Milinda Panha
-
-- Record ID: `milinda-panha-txt:quoted_buddhist_next_reply_3:1973-1997:venerable-nagasena`
-- Kind: `quoted_buddhist_next_reply`
-- Lines: `Milinda Panha.txt:1973-1997`
-- Target: `Participant B (Venerable Nagasena)`
-- Target words: `56`
-
-### User Prompt
-
-```text
-Conversation so far:
-Participant A (King Milinda): Revered Nāgasena, what is the distinguishing mark of wisdom?
-Participant B (Venerable Nagasena): Earlier I said, sire, that cutting off is a distinguishing mark of wisdom. But illuminating is also a distinguishing mark of wisdom.
-Participant A (King Milinda): How, revered sir, is illuminating a distinguishing mark of wisdom?
-
-Write Participant B's next reply.
-```
-
-### Assistant Target
-
-```text
-Sire, when wisdom is uprising it dispels the darkness of ignorance, produces the effulgence of clear knowledge, makes the light of knowing appear, and makes plain the Four Noble Truths. In consequence, one who is devoted to mental training sees what is impermanent, or what is suffering, or what is not-self by means of right wisdom.
-```
-
-## Review Example 10: Milinda Panha
+## Review Example 5: Milinda Panha
 
 - Record ID: `milinda-panha-txt:quoted_buddhist_next_reply_5:6064-6094:venerable-nagasena`
 - Kind: `quoted_buddhist_next_reply`
@@ -252,106 +130,178 @@ Write Participant B's next reply.
 It is true, sire, that in many a hundred ways the Blessed One pointed out to disciples the way to the realization of Nibbāna; but he did not point out a cause for the arising of Nibbāna.
 ```
 
-## Review Example 11: The Gateless Gate
+## Review Example 6: The Gateless Gate
 
-- Record ID: `gateless-gate-wikisource-raw-json:gateless_gate_koan_commentary_26:26-26:mumon`
-- Kind: `gateless_gate_koan_commentary`
-- Lines: `gateless_gate_wikisource_raw.json:26-26`
-- Target: `Participant B (Mumon)`
-- Target words: `38`
-
-### User Prompt
-
-```text
-Koan case 26: Two Monks Roll Up the Screen
-
-Hogen of Seiryo monastery was about to lecture before dinner when he noticed that the bamboo screen lowered for meditation had not been rolled up. He pointed to it. Two monks arose from the audience and rolled it up. Hogen, observing the physical moment, said: "The state of the first monk is good, not that of the other."
-
-Write Mumon's comment on this case.
-```
-
-### Assistant Target
-
-```text
-I want to ask you: Which of those two monks gained and which lost? If any of you has one eye, he will see the failure on the teacher's part. However, I am not discussing gain and loss.
-```
-
-## Review Example 12: The Gateless Gate
-
-- Record ID: `gateless-gate-wikisource-raw-json:gateless_gate_commentary_verse_29:29-29:mumon`
+- Record ID: `gateless-gate-wikisource-raw-json:gateless_gate_commentary_verse_42:42-42:mumon`
 - Kind: `gateless_gate_commentary_verse`
-- Lines: `gateless_gate_wikisource_raw.json:29-29`
+- Lines: `gateless_gate_wikisource_raw.json:42-42`
 - Target: `Participant B (Mumon)`
-- Target words: `14`
+- Target words: `32`
 
 ### User Prompt
 
 ```text
-Koan case 29: Not the Wind, Not the Flag
-
-Two monks were arguing about a flag. One said: "The flag is moving." The other said: "The wind is moving." The sixth patriarch happened to be passing by. He told them: "Not the wind, not the flag; mind is moving."
-
-Mumon's comment:
-The sixth patriarch said: "The wind is not moving, the flag is not moving. Mind is moving." What did he mean? If you understand this intimately, you will see the two monks there trying to buy iron and gaining gold. The sixth patriarch could not bear to see those two dull heads, so he made such a bargain.
-
-Write the verse attached to Mumon's comment.
+Conversation so far:
+Participant A (Koan case 42: The Girl Comes Out from Meditation): In the time of Buddha Shakyamuni, Manjusri went to the assemblage of the Buddhas. When he arrived there, the conference was over and each Buddha had returned to his own Buddha-land. Only one girl was yet unmoved in deep meditation. Manjusri asked Buddha Shakyamuni how it was possible for this girl to reach this state, one which even he could not attain. "Bring her out from Samadhi and ask her yourself," said the Buddha. Manjusri walked around the girl three times and snapped his fingers. She still remained in meditation. So by his miracle power he transported her to a high heaven and tried his best to call her, but in vain. Buddha Shakyamuni said: "Even a hundred thousand Manjusris could not disturb her, but below this place, past twelve hundred million countries, is a Bodhisattva, Mo-myo, seed of delusion. If he comes here, she will awaken." No sooner had the Buddha spoken than that Bodhisattva sprang up from the earth and bowed and paid homage to the Buddha. Buddha directed him to arouse the girl. The Bodhisattva went in front of the girl and snapped his fingers, and in that instant the girl...
 ```
 
 ### Assistant Target
 
 ```text
-Wind, flag, mind moves,
-The same understanding.
-When the mouth opens
-All are wrong.
+One could not awaken her, the other could. Neither are good actors. One wears the mask of god, one a devil's mask. Had both failed, the drama still would be a comedy.
 ```
 
-## Review Example 13: The Diamond Sutra
+## Review Example 7: The Diamond Sutra
 
-- Record ID: `diamond-sutra-gutenberg-txt:diamond_sutra_subhuti_next_reply_34:1786-1905:subhuti`
-- Kind: `diamond_sutra_subhuti_next_reply`
-- Lines: `diamond_sutra_gutenberg.txt:1786-1905`
-- Target: `Participant A (Subhuti)`
+- Record ID: `diamond-sutra-gutenberg-txt:diamond_sutra_buddha_next_reply_115:3282-3349:lord-buddha`
+- Kind: `diamond_sutra_buddha_next_reply`
+- Lines: `diamond_sutra_gutenberg.txt:3282-3349`
+- Target: `Participant B (Lord Buddha)`
+- Target words: `22`
+
+### User Prompt
+
+```text
+Conversation so far:
+Participant B (Lord Buddha): If a disciple asserts that the Lord Buddha comes or goes, sits or reclines, obviously he has not understood the meaning of my discourse. And why? Because, the idea 'Buddha' implies neither coming from anywhere, nor going to anywhere, and hence the synonym 'Buddha!'
+Participant B (Lord Buddha): If a good disciple, whether man or woman, were to take infinite worlds and 'reduce' them to minute particles of dust; what think you, would the aggregate of all those particles of dust be great?
+Participant A (Subhuti): Honoured of the Worlds! the aggregate of all those particles of dust would be exceedingly great. And why? Because, if all those were in reality 'minute particles of dust,' the Lord Buddha would not have declared them to be 'minute particles of dust.' And why? Because, the Lord Buddha, discoursing upon 'minute particles of dust,' declared that in reality those are not 'minute particles of dust,' they are merely termed 'minute particles of dust.'
+Participant A (Subhuti): Honoured of the Worlds! what the Lord Buddha discoursed upon as 'infinite worlds,' these are not in reality 'infinite worlds,' they are merely termed 'infinit...
+```
+
+### Assistant Target
+
+```text
+Belief in the unity or eternity of matter is incomprehensible; and only common, worldly-minded people, for purely materialistic reasons, covet this hypothesis.
+```
+
+## Review Example 8: Sutta Nipata
+
+- Record ID: `sutta-nipata-txt:sutta_nipata_buddha_next_reply_3-4_1:9899-9911:the-buddha`
+- Kind: `sutta_nipata_buddha_next_reply`
+- Lines: `sutta_nipata.txt:9899-9911`
+- Target: `Participant B (The Buddha)`
+- Target words: `24`
+
+### User Prompt
+
+```text
+Conversation so far:
+Participant A (Sundarika): "But, sir, brahmans surely inquire of brahmans, 'Are you among the brahmans?'"
+
+Write Participant B's next reply.
+```
+
+### Assistant Target
+
+```text
+"If you say you're a brahman
+and I'm not a brahman,
+I ask you the three lines of the Sāvitti
+and its twenty-four syllables."
+```
+
+## Review Example 9: Majjhima Nikaya
+
+- Record ID: `mn43-html:majjhima_nikaya_next_reply_43_29:321-326:ven-s-riputta`
+- Kind: `majjhima_nikaya_next_reply`
+- Lines: `MN43.html:321-326`
+- Target: `Participant B (Ven. Sāriputta)`
 - Target words: `25`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant B (Lord Buddha): Enlightened disciples ought therefore to engender within themselves a pure and holy mind; they ought not to depend on the phenomena of form, sound, odour, taste, touch, or Law; they ought to sedulously cultivate a mind independent of every material aid.
-Participant B (Lord Buddha): Supposing a man with a body as pretentious as Sumeru, prince among mountains, would you esteem such a body as being great?
-Participant A (Subhuti): Exceedingly great, Honoured of the Worlds! And why? Because, the Lord Buddha referred not to a physical body, but to mental and spiritual concepts of bodies, in which sense a body may be regarded as really Great.
-Participant B (Lord Buddha): If there were rivers Ganges as numerous as the sands of the Ganges, would the aggregate grains of sand be of considerable number?
+Participant B (Ven. Sāriputta): Friend, how many kinds of becoming are there?
+Participant A (Ven. Mahā Koṭṭhita): And how is further becoming in the future brought about?
+Participant B (Ven. Sāriputta): The delight, now here, now there, of beings hindered by ignorance & fettered by craving: That's how further becoming in the future is brought about.
+Participant A (Ven. Mahā Koṭṭhita): And how is further becoming in the future not brought about?
 
-Write Participant A's next reply.
+Write Participant B's next reply.
 ```
 
 ### Assistant Target
 
 ```text
-Of very considerable number, Honoured of the Worlds! The rivers Ganges alone would be innumerable, and much more innumerable would be the grains of sand.
+Through the fading of ignorance, the arising of clear knowing, & the cessation of craving: That's how further becoming in the future is not brought about.
 ```
 
-## Review Example 14: The Diamond Sutra
+## Review Example 10: Itivuttaka
 
-- Record ID: `diamond-sutra-gutenberg-txt:diamond_sutra_buddha_next_reply_120:3408-3483:lord-buddha`
-- Kind: `diamond_sutra_buddha_next_reply`
-- Lines: `diamond_sutra_gutenberg.txt:3408-3483`
-- Target: `Participant B (Lord Buddha)`
-- Target words: `65`
+- Record ID: `itivuttaka-thanissaro-txt:itivuttaka_prose_to_verse_19:499-518:blessed-one`
+- Kind: `itivuttaka_prose_to_verse`
+- Lines: `itivuttaka_thanissaro.txt:499-518`
+- Target: `Participant B (Blessed One)`
+- Target words: `32`
+
+### User Prompt
+
+```text
+Itivuttaka section 19
+
+Prose teaching:
+One thing, monks, when arising in the world, arises for the welfare of many, for the happiness of many, for the welfare & happiness of many beings, both human & divine. Which one thing? Concord in the Sangha. When the Sangha is in concord, there are no arguments with one another, no abuse of one another, no ganging up on one another, no abandoning of one another. There those with little confidence [in the teaching] become confident, while those already confident become even more so.
+
+Write the verse summary attached to this teaching.
+```
+
+### Assistant Target
+
+```text
+Blissful is concord in the Sangha.
+One who assists in concord-
+delighting in concord,
+judicious-
+isn't barred from safety from bondage.
+Having brought concord to the Sangha,
+he rejoices for an eon
+in heaven.
+```
+
+## Review Example 11: Zen Koans Database
+
+- Record ID: `zen-koans-database:zen_koans_database_clean_dialogue_children_of_his_majesty_1:1-5:yamaoka`
+- Kind: `zen_koans_database_clean_dialogue`
+- Lines: `children_of_his_majesty.html:1-5`
+- Target: `Participant B (Yamaoka)`
+- Target words: `9`
 
 ### User Prompt
 
 ```text
 Conversation so far:
-Participant B (Lord Buddha): If a disciple affirmed that the Lord Buddha enunciated a belief that the mind can comprehend the idea of an entity, a being, a living being, or a personality; what think you, Subhuti, would that disciple be interpreting aright the meaning of my discourse?
-Participant A (Subhuti): Honoured of the Worlds! that disciple would not be interpreting aright the meaning of the Lord Buddha's discourse. And why? Because, Honoured of the Worlds! discoursing upon comprehending such ideas as an entity, a being, a living being, and a personality, it was declared that these are entirely unreal and illusive, and therefore they are merely termed an entity, a being, a living being, and a personality.
-Participant B (Lord Buddha): Those who aspire to the attainment of supreme spiritual wisdom ought thus to know, believe in, and interpret phenomena. They ought to eliminate from their minds every tangible evidence of every visible object. Subhuti, concerning 'visible objects,' the Lord Buddha declared that these are not really 'visible objects' they are merely termed 'visible objects.'
-Participant B (Lord Buddha): If a disciple, having immeasurable sph...
+Participant A (Emperor): What became of the new clothes, Yamaoka?
+
+Write Participant B (Yamaoka)'s next reply.
 ```
 
 ### Assistant Target
 
 ```text
-In what attitude of mind should it be diligently explained to others? Not assuming the permanency or the reality of earthly phenomena, but in the conscious blessedness of a mind at perfect rest. And why? Because, the phenomena of life may be likened unto a dream, a phantasm, a bubble, a shadow, the glistening dew, or lightning flash, and thus they ought to be contemplated.
+I provided clothes for the children of Your Majesty,
+```
+
+## Review Example 12: Asclepius
+
+- Record ID: `asclepius-txt:asclepius_next_reply:3244-3289:hermes`
+- Kind: `asclepius_next_reply`
+- Lines: `Asclepius.txt:3244-3289`
+- Target: `Participant B (Hermes)`
+- Target words: `19`
+
+### User Prompt
+
+```text
+Conversation so far:
+Hermes: O Tat, do you think that we should suggest to your father that he order frankincense and perfumes to be used when we say our prayer to God?
+Asclepius: We render you thanks, most high and potent God, for it is only by your grace that we have come to the light of your knowledge. Holy and reverend is your name, the one name by which God alone is to be praised according to the religion of our fathers. We do indeed thank you since you deign to give all beings your paternal care, your religion and your love, and even sweeter, upon us you have bestowed these powers: perception, reason and intelligence; perception, that we may recognise you; reason, that we may follow up our intuition, and knowledge, that in knowing you we may find joy.
+
+Write Participant B's next reply.
+```
+
+### Assistant Target
+
+```text
+Desirous of these things we turn to a repast that is pure, and undefiled by the flesh of animals.
 ```

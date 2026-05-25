@@ -53,13 +53,20 @@ scripts in order:
 3. `parse_diamond_sutra.py`
    Extracts attributed dialogue rows from The Diamond Sutra.
 
-4. `combine_dialogue_datasets.py`
-   Combines the generated JSONL files and skips duplicate record IDs.
+4. `parse_udana.py`
+   Regenerates the Udana exclamation rows used in the full dataset.
 
-5. `split_dialogue_dataset.py`
+5. `parse_sutta_nipata.py`
+   Regenerates the Sutta Nipata rows used in the full dataset.
+
+6. `combine_dialogue_datasets.py`
+   Combines the base output with Gateless Gate, Diamond Sutra, Udana
+   exclamation, and Sutta Nipata JSONL files, then skips duplicate record IDs.
+
+7. `split_dialogue_dataset.py`
    Creates combined, Buddhist-only, and esoteric-only train/eval splits.
 
-6. `make_review_sample.py`
+8. `make_review_sample.py`
    Creates smaller Markdown files that are easier to inspect by hand.
 
 Current full output folder:
@@ -71,10 +78,26 @@ review_outputs/full_dialogue_dataset/
 Current generated full dataset counts:
 
 ```text
-Combined: 671 rows, 607 train, 64 eval
-Buddhist: 273 rows
-Esoteric: 398 rows
+Combined: 862 rows, 779 train, 83 eval
+Buddhist: 464 rows, 420 train, 44 eval
+Esoteric: 398 rows, 359 train, 39 eval
 ```
+
+Current combined sources:
+
+```text
+The Key to Theosophy: 370 rows
+The Corpus Hermeticum: 28 rows
+Milinda Panha: 73 rows
+Platform Sutra: 19 rows
+The Gateless Gate: 129 rows
+The Diamond Sutra: 83 rows
+Udana: 80 rows
+Sutta Nipata: 80 rows
+```
+
+The main rebuild command now regenerates every source currently included in the
+full combined dataset before writing splits and review samples.
 
 ## Important Folders
 
@@ -94,11 +117,14 @@ Most important files:
 - `parse_diamond_sutra.py`
   Builds The Diamond Sutra rows.
 - `parse_udana.py`
-  Builds Udana review rows. These outputs exist, but this script is not called
-  by the full rebuild command.
+  Builds Udana rows. The full dataset currently uses the regenerated
+  `udana_exclamation_dialogue.jsonl` output.
+- `parse_sutta_nipata.py`
+  Builds Sutta Nipata rows. The full rebuild command regenerates this output
+  before combining datasets.
 - `parse_itivuttaka.py`
-  Builds Itivuttaka review rows. These outputs exist, but this script is not
-  called by the full rebuild command.
+  Builds Itivuttaka review rows. These outputs exist, but they are not currently
+  included in the full combined dataset.
 - `split_dialogue_dataset.py`
   Writes train/eval splits.
 - `make_review_sample.py`
@@ -197,6 +223,23 @@ review_outputs/full_dialogue_dataset/full_dialogue_dataset_review.md
 
 These files show the prompt and target answer in a human-readable way.
 
+## Quick Checks
+
+Run the currently available parser unittest from the repository root:
+
+```bash
+python3 -B scripts/extraction/test_parse_zen_koans_database.py
+```
+
+Regenerate the dataset validation report:
+
+```bash
+PYTHONPATH=scripts/extraction python3 -B scripts/extraction/validate_dialogue_dataset.py --output-md review_outputs/full_dialogue_dataset/dialogue_dataset_validation_report.md
+```
+
+For dataset health, check `full_dialogue_dataset_splits.md` after each rebuild
+and verify row counts, source coverage, and train/eval sizes before training.
+
 ## Notes
 
 - The extraction code uses regular expressions and source-specific rules. It is
@@ -206,8 +249,9 @@ These files show the prompt and target answer in a human-readable way.
   page noise.
 - Some source folders and file names contain spaces. Quote those paths in shell
   commands.
-- This repository currently has no test suite or packaging file. Most scripts
-  are run directly with `python3`.
+- This repository currently has one lightweight unittest for the Zen Koans
+  parser, but no broader test suite or packaging file. Most scripts are run
+  directly with `python3`.
 
 For a slower, more detailed explanation of how the code works, read
 `CODE_EXPLAINED.md`.

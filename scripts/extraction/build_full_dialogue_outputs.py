@@ -8,11 +8,16 @@ import subprocess
 import sys
 from pathlib import Path
 
+from dialogue_source_manifest import (
+    APPROVED_SOURCE_SPECS,
+    output_path_for_spec,
+)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SCRIPT_DIR = Path(__file__).resolve().parent
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "review_outputs/full_dialogue_dataset"
 DEFAULT_NEW_BUDDHIST_DIR = REPO_ROOT / "review_outputs/new_buddhist_sources"
+DEFAULT_NEW_ESOTERIC_DIR = REPO_ROOT / "review_outputs/new_esoteric_sources"
 
 
 def run_script(script_name: str, *args: str) -> None:
@@ -24,6 +29,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Build full dialogue datasets and splits.")
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--new-buddhist-dir", type=Path, default=DEFAULT_NEW_BUDDHIST_DIR)
+    parser.add_argument("--new-esoteric-dir", type=Path, default=DEFAULT_NEW_ESOTERIC_DIR)
     parser.add_argument("--eval-ratio", type=float, default=0.1)
     parser.add_argument("--combined-sample-count", type=int, default=12)
     parser.add_argument("--buddhist-sample-count", type=int, default=10)
@@ -36,11 +42,8 @@ def main() -> None:
 
     output_dir = args.output_dir.expanduser().resolve()
     new_buddhist_dir = args.new_buddhist_dir.expanduser().resolve()
+    new_esoteric_dir = args.new_esoteric_dir.expanduser().resolve()
     base_jsonl = output_dir / "full_dialogue_dataset.jsonl"
-    gateless_jsonl = new_buddhist_dir / "gateless_gate_dialogue.jsonl"
-    diamond_jsonl = new_buddhist_dir / "diamond_sutra_dialogue.jsonl"
-    udana_jsonl = new_buddhist_dir / "udana_exclamation_dialogue.jsonl"
-    sutta_nipata_jsonl = new_buddhist_dir / "sutta_nipata_dialogue.jsonl"
 
     run_script(
         "build_pilot_dialogue_dataset.py",
@@ -75,32 +78,45 @@ def main() -> None:
         "--preview-chars",
         "1000",
     )
-    run_script(
-        "parse_gateless_gate.py",
-        "--output-dir",
-        str(new_buddhist_dir),
-        "--include-internal-dialogue",
-        "--sample-count",
-        str(args.buddhist_sample_count),
-        "--preview-chars",
-        "1400",
-    )
-    run_script(
-        "parse_diamond_sutra.py",
-        "--output-dir",
-        str(new_buddhist_dir),
-        "--sample-count",
-        str(args.buddhist_sample_count),
-        "--preview-chars",
-        "1400",
-    )
+    for spec in APPROVED_SOURCE_SPECS:
+        if spec.parser_script is None:
+            continue
+        if spec.output_group == "new_buddhist":
+            target_output_dir = new_buddhist_dir
+        elif spec.output_group == "new_esoteric":
+            target_output_dir = new_esoteric_dir
+        else:
+            continue
+        run_script(
+            spec.parser_script,
+            "--output-dir",
+            str(target_output_dir),
+            "--dataset-name",
+            spec.dataset_name,
+            *spec.parser_args,
+            "--sample-count",
+            str(args.buddhist_sample_count),
+            "--preview-chars",
+            "1400",
+        )
+    combine_inputs: list[str] = []
+    seen_inputs: set[str] = set()
+    for spec in APPROVED_SOURCE_SPECS:
+        input_path = str(
+            output_path_for_spec(
+                spec,
+                output_dir=output_dir,
+                new_buddhist_dir=new_buddhist_dir,
+                new_esoteric_dir=new_esoteric_dir,
+            )
+        )
+        if input_path in seen_inputs:
+            continue
+        seen_inputs.add(input_path)
+        combine_inputs.append(input_path)
     run_script(
         "combine_dialogue_datasets.py",
-        str(base_jsonl),
-        str(gateless_jsonl),
-        str(diamond_jsonl),
-        str(udana_jsonl),
-        str(sutta_nipata_jsonl),
+        *combine_inputs,
         "--output",
         str(base_jsonl),
     )

@@ -9,16 +9,11 @@ from collections import Counter
 from pathlib import Path
 from typing import Iterable
 
+from dialogue_source_manifest import source_labels_for_family
 
-ESOTERIC_SOURCES = {"The Key to Theosophy", "The Corpus Hermeticum", "Asclepius"}
-BUDDHIST_SOURCES = {
-    "Milinda Panha",
-    "Platform Sutra",
-    "The Gateless Gate",
-    "The Diamond Sutra",
-    "Udana",
-    "Sutta Nipata",
-}
+
+ESOTERIC_SOURCES = source_labels_for_family("esoteric")
+BUDDHIST_SOURCES = source_labels_for_family("buddhist")
 
 
 def read_jsonl(path: Path) -> list[dict]:

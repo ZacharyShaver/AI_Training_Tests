@@ -27,9 +27,20 @@ Each row uses chat messages:
 
 ## Current counts
 
-- Combined: 671 rows, 607 train, 64 eval.
+- Combined: 862 rows, 779 train, 83 eval.
 - Esoteric: 398 rows, 359 train, 39 eval.
-- Buddhist: 273 rows, 248 train, 25 eval.
+- Buddhist: 464 rows, 420 train, 44 eval.
+
+## Included sources
+
+- `The Key to Theosophy`: 370 rows.
+- `The Corpus Hermeticum`: 28 rows.
+- `Milinda Panha`: 73 rows.
+- `Platform Sutra`: 19 rows.
+- `The Gateless Gate`: 129 rows.
+- `The Diamond Sutra`: 83 rows.
+- `Udana`: 80 rows.
+- `Sutta Nipata`: 80 rows.
 
 ## Rebuild command
 
@@ -39,6 +50,7 @@ From the repository root:
 PYTHONPATH=scripts/extraction python3 scripts/extraction/build_full_dialogue_outputs.py
 ```
 
-That command rebuilds the original-source dialogue rows, parses the added
-Gateless Gate and Diamond Sutra sources, combines everything, regenerates
-train/eval splits, and refreshes review samples.
+That command rebuilds the original-source dialogue rows, parses the included
+Gateless Gate, Diamond Sutra, Udana, and Sutta Nipata sources, combines the
+current full JSONL files, regenerates train/eval splits, and refreshes review
+samples.

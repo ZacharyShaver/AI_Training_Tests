@@ -8,10 +8,12 @@ import json
 from pathlib import Path
 
 from preview_dialogue_examples import preview_text, select_spread
+from review_policy import assess_row, assessment_summary_text
 
 
 def row_to_markdown(row: dict, index: int, *, preview_chars: int) -> str:
     metadata = row["metadata"]
+    assessment = assess_row(row)
     lines = [
         f"## Review Example {index}: {metadata['source']}",
         "",
@@ -20,6 +22,7 @@ def row_to_markdown(row: dict, index: int, *, preview_chars: int) -> str:
         f"- Lines: `{metadata['source_file']}:{metadata['source_lines'][0]}-{metadata['source_lines'][1]}`",
         f"- Target: `{metadata['target_participant']} ({metadata['target_speaker']})`",
         f"- Target words: `{metadata['target_words']}`",
+        f"- Reviewer status: `{assessment.label}`",
         "",
         "### User Prompt",
         "",
@@ -33,8 +36,49 @@ def row_to_markdown(row: dict, index: int, *, preview_chars: int) -> str:
         preview_text(row["messages"][2]["content"], limit=preview_chars),
         "```",
         "",
+        "### Review Notes",
+        "",
+        f"- Summary: `{assessment_summary_text(assessment)}`",
     ]
+    if assessment.hard_failures:
+        lines.extend(
+            [
+                "- Hard failures:",
+                *[f"  - {item}" for item in assessment.hard_failures],
+            ]
+        )
+    if assessment.warnings:
+        lines.extend(
+            [
+                "- Warnings:",
+                *[f"  - {item}" for item in assessment.warnings],
+            ]
+        )
+    lines.extend(
+        [
+            "",
+        ]
+    )
     return "\n".join(lines)
+
+
+def sample_status_summary(rows: list[dict]) -> dict[str, int]:
+    counts = {"Approve": 0, "Approve with warning": 0, "Reject": 0}
+    for row in rows:
+        counts[assess_row(row).label] += 1
+    return counts
+
+
+def render_status_summary(rows: list[dict]) -> list[str]:
+    counts = sample_status_summary(rows)
+    return [
+        "## Review Policy Summary",
+        "",
+        f"- Approve: `{counts['Approve']}`",
+        f"- Approve with warning: `{counts['Approve with warning']}`",
+        f"- Reject: `{counts['Reject']}`",
+        "",
+    ]
 
 
 def main() -> None:
@@ -66,6 +110,7 @@ def main() -> None:
                 f"Sampled rows: `{len(selected)}`",
                 f"Source dataset: `{args.input_jsonl}`",
                 "",
+                *render_status_summary(selected),
                 *[
                     row_to_markdown(row, idx, preview_chars=args.preview_chars)
                     for idx, row in enumerate(selected, 1)

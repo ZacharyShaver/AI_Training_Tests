@@ -1,0 +1,6 @@
+parser: parse_vimalakirti.py
+set: set_03
+status: machine-pass-set-1
+seed: 20260525
+rows: 17
+sampled_rows: 10
