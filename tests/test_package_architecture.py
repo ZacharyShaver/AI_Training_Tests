@@ -45,3 +45,10 @@ def test_asclepius_parser_is_available_from_package_and_legacy_paths() -> None:
 
     assert package_infer(quote, previous_speaker="Hermes") == "Asclepius"
     assert legacy_infer is package_infer
+
+
+def test_milinda_parser_is_available_from_package_and_legacy_paths() -> None:
+    from ai_training_tests.extraction.parsers.milinda_panha import main as package_main
+    from scripts.extraction.parse_milinda_panha import main as legacy_main
+
+    assert legacy_main is package_main

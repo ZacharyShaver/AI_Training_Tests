@@ -9,6 +9,9 @@ active
 This hub maps the current parser surface for `AI_Training_Tests`. Use it before
 editing parser code or promoting candidate source outputs into the final dataset.
 
+Companion guide: [[Parser Pseudocode Guide]] explains the parser family in
+plain-language pseudocode for easier onboarding.
+
 ## Final Parsers And Sources
 
 | Parser note | Source | Current rows | Evidence |
@@ -29,11 +32,12 @@ editing parser code or promoting candidate source outputs into the final dataset
 
 ## Candidate Or In Review Parsers
 
-| Parser note | Source | Current rows | Status |
-| --- | --- | ---: | --- |
-| [[parse_blue_cliff_record]] | Blue Cliff Record | 10 dialogue, 31 ode, 227 internal candidates | candidate |
-| [[parse_dhammapada_commentary]] | Dhammapada Commentary | sample exists | candidate |
-| [[parse_udana]] | Udana direct dialogue rows | 107 | candidate separate from final exclamation rows |
+| Parser note                     | Source                     |                                 Current rows | Status                                         |
+| ------------------------------- | -------------------------- | -------------------------------------------: | ---------------------------------------------- |
+| [[parse_blue_cliff_record]]     | Blue Cliff Record          | 10 dialogue, 31 ode, 227 internal candidates | candidate                                      |
+| [[parse_dhammapada_commentary]] | Dhammapada Commentary      |                                sample exists | candidate                                      |
+| [[parse_milinda_panha]]         | Milinda Panha (SuttaCentral export) |                                    25 | candidate, first random review packet created  |
+| [[parse_udana]]                 | Udana direct dialogue rows |                                           27 | candidate separate from final exclamation rows |
 
 ## Review Rules
 
@@ -60,4 +64,3 @@ editing parser code or promoting candidate source outputs into the final dataset
   as a compatibility output or be replaced after hash and reference checks?
 - Should candidate Blue Cliff, Dhammapada Commentary, and Udana direct rows move
   through the new random-sample review pipeline before any final promotion?
-

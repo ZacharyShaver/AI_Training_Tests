@@ -13,8 +13,10 @@ final, with candidate direct-dialogue rows
 ## Source And Outputs
 
 The current final dataset uses 80 Udana exclamation rows. A separate
-`udana_dialogue.jsonl` candidate output has 107 direct-dialogue rows and should
-be reviewed separately before any promotion.
+`udana_direct_dialogue.jsonl` candidate output has 27 direct-dialogue rows and
+should be reviewed separately before any promotion. The older
+`udana_dialogue.jsonl` artifact is a mixed 107-row output and should not be used
+as the direct-dialogue candidate source.
 
 ## Extraction Strategy
 
@@ -39,8 +41,9 @@ in `config/dataset_manifest.json`.
 ## Evidence
 
 - `review_outputs/new_buddhist_sources/udana_exclamation_dialogue.jsonl`: 80 final rows.
-- `review_outputs/new_buddhist_sources/udana_dialogue.jsonl`: 107 candidate rows.
+- `review_outputs/new_buddhist_sources/udana_direct_dialogue.jsonl`: 27 candidate direct-dialogue rows.
 - `review_outputs/new_buddhist_sources/udana_exclamation_dialogue_review_sample.md`: review sample.
+- `review_outputs/new_buddhist_sources/udana_direct_dialogue_review_sample.md`: direct-dialogue review sample.
 
 ## Related Parsers
 
@@ -54,4 +57,3 @@ in `config/dataset_manifest.json`.
 ## Next Likely Improvements
 
 - Run direct-dialogue candidates through the new random-sample review workflow.
-

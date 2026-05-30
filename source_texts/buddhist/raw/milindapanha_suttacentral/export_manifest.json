@@ -1,0 +1,1432 @@
+{
+  "source": "SuttaCentral Milindapañha",
+  "base_url": "https://suttacentral.net/",
+  "refs": [
+    "mil3.1.1",
+    "mil3.1.10",
+    "mil3.1.11",
+    "mil3.1.12",
+    "mil3.1.13",
+    "mil3.1.14",
+    "mil3.1.15",
+    "mil3.1.16",
+    "mil3.1.2",
+    "mil3.1.3",
+    "mil3.1.4",
+    "mil3.1.5",
+    "mil3.1.6",
+    "mil3.1.7",
+    "mil3.1.8",
+    "mil3.1.9",
+    "mil3.2.1",
+    "mil3.2.2",
+    "mil3.2.3",
+    "mil3.2.4",
+    "mil3.2.5",
+    "mil3.2.6",
+    "mil3.2.7",
+    "mil3.2.8",
+    "mil3.2.9",
+    "mil3.3.1",
+    "mil3.3.10",
+    "mil3.3.11",
+    "mil3.3.12",
+    "mil3.3.13",
+    "mil3.3.14",
+    "mil3.3.2",
+    "mil3.3.3",
+    "mil3.3.4",
+    "mil3.3.5",
+    "mil3.3.6",
+    "mil3.3.7",
+    "mil3.3.8",
+    "mil3.3.9",
+    "mil3.4.1",
+    "mil3.4.10",
+    "mil3.4.2",
+    "mil3.4.3",
+    "mil3.4.4",
+    "mil3.4.5",
+    "mil3.4.6",
+    "mil3.4.7",
+    "mil3.4.8",
+    "mil3.4.9",
+    "mil3.5.1",
+    "mil3.5.10",
+    "mil3.5.2",
+    "mil3.5.3",
+    "mil3.5.4",
+    "mil3.5.5",
+    "mil3.5.6",
+    "mil3.5.7",
+    "mil3.5.8",
+    "mil3.5.9",
+    "mil3.6.1",
+    "mil3.6.10",
+    "mil3.6.11",
+    "mil3.6.2",
+    "mil3.6.3",
+    "mil3.6.4",
+    "mil3.6.5",
+    "mil3.6.6",
+    "mil3.6.7",
+    "mil3.6.8",
+    "mil3.6.9",
+    "mil3.7.1",
+    "mil3.7.10",
+    "mil3.7.11",
+    "mil3.7.12",
+    "mil3.7.13",
+    "mil3.7.14",
+    "mil3.7.15",
+    "mil3.7.16",
+    "mil3.7.2",
+    "mil3.7.3",
+    "mil3.7.4",
+    "mil3.7.5",
+    "mil3.7.6",
+    "mil3.7.7",
+    "mil3.7.8",
+    "mil3.7.9",
+    "mil5.1.1",
+    "mil5.1.10",
+    "mil5.1.2",
+    "mil5.1.3",
+    "mil5.1.4",
+    "mil5.1.5",
+    "mil5.1.6",
+    "mil5.1.7",
+    "mil5.1.8",
+    "mil5.1.9",
+    "mil5.2.1",
+    "mil5.2.2",
+    "mil5.2.3",
+    "mil5.2.4",
+    "mil5.2.5",
+    "mil5.2.6",
+    "mil5.2.7",
+    "mil5.2.8",
+    "mil5.3.1",
+    "mil5.3.10",
+    "mil5.3.11",
+    "mil5.3.12",
+    "mil5.3.2",
+    "mil5.3.3",
+    "mil5.3.4",
+    "mil5.3.5",
+    "mil5.3.6",
+    "mil5.3.7",
+    "mil5.3.8",
+    "mil5.3.9",
+    "mil5.4.1",
+    "mil5.4.10",
+    "mil5.4.2",
+    "mil5.4.3",
+    "mil5.4.4",
+    "mil5.4.5",
+    "mil5.4.6",
+    "mil5.4.7",
+    "mil5.4.8",
+    "mil5.4.9",
+    "mil5.5.1",
+    "mil5.5.10",
+    "mil5.5.11",
+    "mil5.5.2",
+    "mil5.5.3",
+    "mil5.5.4",
+    "mil5.5.5",
+    "mil5.5.6",
+    "mil5.5.7",
+    "mil5.5.8",
+    "mil5.5.9",
+    "mil6.1.1",
+    "mil6.1.2",
+    "mil6.1.3",
+    "mil6.1.4",
+    "mil6.1.5",
+    "mil6.1.6",
+    "mil6.1.7",
+    "mil6.1.8",
+    "mil6.1.9",
+    "mil6.2.1",
+    "mil6.2.10",
+    "mil6.2.2",
+    "mil6.2.3",
+    "mil6.2.4",
+    "mil6.2.5",
+    "mil6.2.6",
+    "mil6.2.7",
+    "mil6.2.8",
+    "mil6.2.9",
+    "mil6.3.1",
+    "mil6.3.10",
+    "mil6.3.11",
+    "mil6.3.12",
+    "mil6.3.2",
+    "mil6.3.3",
+    "mil6.3.4",
+    "mil6.3.5",
+    "mil6.3.6",
+    "mil6.3.7",
+    "mil6.3.8",
+    "mil6.3.9",
+    "mil6.4.1",
+    "mil6.4.2",
+    "mil7.2.1",
+    "mil7.2.10",
+    "mil7.2.2",
+    "mil7.2.3",
+    "mil7.2.4",
+    "mil7.2.5",
+    "mil7.2.6",
+    "mil7.2.7",
+    "mil7.2.8",
+    "mil7.2.9",
+    "mil7.3.1",
+    "mil7.3.10",
+    "mil7.3.2",
+    "mil7.3.3",
+    "mil7.3.4",
+    "mil7.3.5",
+    "mil7.3.6",
+    "mil7.3.7",
+    "mil7.3.8",
+    "mil7.3.9",
+    "mil7.4.1",
+    "mil7.4.10",
+    "mil7.4.2",
+    "mil7.4.3",
+    "mil7.4.4",
+    "mil7.4.5",
+    "mil7.4.6",
+    "mil7.4.7",
+    "mil7.4.8",
+    "mil7.4.9",
+    "mil7.5.1",
+    "mil7.5.10",
+    "mil7.5.2",
+    "mil7.5.3",
+    "mil7.5.4",
+    "mil7.5.5",
+    "mil7.5.6",
+    "mil7.5.7",
+    "mil7.5.8",
+    "mil7.5.9",
+    "mil7.6.1",
+    "mil7.6.10",
+    "mil7.6.2",
+    "mil7.6.3",
+    "mil7.6.4",
+    "mil7.6.5",
+    "mil7.6.6",
+    "mil7.6.7",
+    "mil7.6.8",
+    "mil7.6.9",
+    "mil7.7.1",
+    "mil7.7.10",
+    "mil7.7.2",
+    "mil7.7.3",
+    "mil7.7.4",
+    "mil7.7.5",
+    "mil7.7.6",
+    "mil7.7.7",
+    "mil7.7.8",
+    "mil7.7.9",
+    "mil7.8.1",
+    "mil7.8.2",
+    "mil7.8.3",
+    "mil7.8.4",
+    "mil7.8.5",
+    "mil7.8.6",
+    "mil7.8.7"
+  ],
+  "output_path": "C:\\Users\\ztsha\\OneDrive\\Desktop\\AI_Training_Tests\\source_texts\\buddhist\\clean\\milindapanha_suttacentral.txt",
+  "index_url": "https://suttacentral.net/api/suttaplex/mil",
+  "section_translations": [
+    {
+      "section_ref": "mil3.1.1",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.1_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.10",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.10_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.11",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.11_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.12",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.12_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.13",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.13_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.14",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.14_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.15",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.15_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.16",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.16_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.2",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.2_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.3",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.3_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.4",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.4_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.5",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.5_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.6",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.6_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.7",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.7_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.8",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.8_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.1.9",
+      "author_uid": "kelly",
+      "translation_id": "mil3.1.9_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.1",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.1_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.2",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.2_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.3",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.3_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.4",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.4_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.5",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.5_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.6",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.6_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.7",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.7_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.8",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.8_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.2.9",
+      "author_uid": "kelly",
+      "translation_id": "mil3.2.9_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.1",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.1_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.10",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.10_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.11",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.11_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.12",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.12_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.13",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.13_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.14",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.14_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.2",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.2_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.3",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.3_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.4",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.4_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.5",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.5_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.6",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.6_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.7",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.7_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.8",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.8_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.3.9",
+      "author_uid": "kelly",
+      "translation_id": "mil3.3.9_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.1",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.1_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.10",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.10_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.2",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.2_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.3",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.3_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.4",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.4_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.5",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.5_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.6",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.6_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.7",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.7_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.8",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.8_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.4.9",
+      "author_uid": "kelly",
+      "translation_id": "mil3.4.9_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.1",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.1_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.10",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.10_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.2",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.2_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.3",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.3_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.4",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.4_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.5",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.5_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.6",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.6_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.7",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.7_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.8",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.8_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.5.9",
+      "author_uid": "kelly",
+      "translation_id": "mil3.5.9_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.1",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.1_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.10",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.10_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.11",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.11_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.2",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.2_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.3",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.3_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.4",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.4_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.5",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.5_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.6",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.6_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.7",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.7_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.8",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.8_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.6.9",
+      "author_uid": "kelly",
+      "translation_id": "mil3.6.9_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.1",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.1_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.10",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.10_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.11",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.11_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.12",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.12_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.13",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.13_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.14",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.14_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.15",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.15_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.16",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.16_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.2",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.2_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.3",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.3_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.4",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.4_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.5",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.5_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.6",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.6_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.7",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.7_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.8",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.8_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil3.7.9",
+      "author_uid": "kelly",
+      "translation_id": "mil3.7.9_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil5.1.1",
+      "author_uid": "kelly",
+      "translation_id": "mil5.1.1_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil5.1.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.1.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.1.2",
+      "author_uid": "kelly",
+      "translation_id": "mil5.1.2_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil5.1.3",
+      "author_uid": "kelly",
+      "translation_id": "mil5.1.3_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil5.1.4",
+      "author_uid": "kelly",
+      "translation_id": "mil5.1.4_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil5.1.5",
+      "author_uid": "kelly",
+      "translation_id": "mil5.1.5_translation-en-kelly"
+    },
+    {
+      "section_ref": "mil5.1.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.1.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.1.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.1.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.1.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.1.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.1.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.1.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.2.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.2.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.2.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.2.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.2.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.2.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.2.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.2.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.2.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.2.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.2.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.2.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.2.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.2.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.2.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.2.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.11",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.11_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.12",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.12_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.3.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.3.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.4.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.4.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.11",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.11_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil5.5.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil5.5.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.1.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.1.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.2.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.2.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.11",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.11_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.12",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.12_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.3.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.3.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.4.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.4.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil6.4.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil6.4.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.2.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.2.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.3.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.3.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.4.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.4.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.5.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.5.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.6.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.6.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.10",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.10_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.7_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.8",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.8_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.7.9",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.7.9_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.8.1",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.8.1_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.8.2",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.8.2_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.8.3",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.8.3_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.8.4",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.8.4_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.8.5",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.8.5_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.8.6",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.8.6_tw_rhysdavids"
+    },
+    {
+      "section_ref": "mil7.8.7",
+      "author_uid": "tw_rhysdavids",
+      "translation_id": "en_mil7.8.7_tw_rhysdavids"
+    }
+  ]
+}

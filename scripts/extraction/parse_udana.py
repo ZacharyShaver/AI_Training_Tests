@@ -17,7 +17,6 @@ from build_pilot_dialogue_dataset import (
 )
 from preview_dialogue_examples import SYSTEM_PROMPTS, preview_text, select_spread
 
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SOURCE = REPO_ROOT / "source_texts/buddhist/clean/udana.txt"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "review_outputs/new_buddhist_sources"
@@ -359,7 +358,9 @@ BLESSED_PREFIX_RE = re.compile(
     re.IGNORECASE,
 )
 SUFFIX_SPEAKER_RE = re.compile(
-    rf"^\s*,?\s*(?:When this was said,\s*)?(?P<speaker>{NON_BLESSED_SPEAKER_PATTERN})\s+{SPEECH_VERB_RE}\b",
+    rf"^\s*,?\s*(?:When this was said,\s*)?"
+    rf"(?P<speaker>{NON_BLESSED_SPEAKER_PATTERN})\s+"
+    rf"{SPEECH_VERB_RE}\b",
     re.IGNORECASE,
 )
 
@@ -437,10 +438,28 @@ def is_nested_open_quote(text: str, idx: int) -> bool:
 
 def infer_blessed_pronoun_speaker(prefix: str) -> bool:
     tail = clean_dialogue_text(prefix[-700:])
+    blessed_action_pattern = (
+        r"(?:sat|stood|lay|went|drank|endured|adjusted|addressed|said|told|"
+        r"responded|replied)"
+    )
+    speech_action_pattern = r"(?:said|addressed|told|asked)"
+    addressee_pattern = r"(?:Ven\.[^.?!\",]{0,80}|the monks|him|her|them)"
     patterns = [
-        r"\bBlessed One\s+(?:sat|stood|lay|went|drank|endured|adjusted|addressed|said|told|responded|replied)\b.{0,420}\b(?:Seated,\s*)?(?:Then\s+)?he\s+(?:said|addressed|told|asked)\s+(?:to\s+)?(?:Ven\.[^.?!\",]{0,80}|the monks|him|her|them)[^.?!\"]{0,120}[:,]\s*$",
-        r"\bBlessed One,\s+(?:lying|seated|standing|having|after)\b.{0,420}\b(?:the Teacher|he)\s+(?:said|addressed|told|asked)\s+(?:to\s+)?(?:Ven\.[^.?!\",]{0,80}|the monks|him|her|them)[^.?!\"]{0,120}[:,]\s*$",
-        r"\bBlessed One,\s+(?:going|having|after)\b.{0,420}\b(?:said|addressed|told|asked)\s+(?:to\s+)?(?:Ven\.[^.?!\",]{0,80}|the monks|him|her|them)[^.?!\"]{0,120}[:,]\s*$",
+        (
+            rf"\bBlessed One\s+{blessed_action_pattern}\b.{{0,420}}\b"
+            rf"(?:Seated,\s*)?(?:Then\s+)?he\s+{speech_action_pattern}\s+"
+            rf"(?:to\s+)?{addressee_pattern}[^.?!\"]{{0,120}}[:,]\s*$"
+        ),
+        (
+            rf"\bBlessed One,\s+(?:lying|seated|standing|having|after)\b.{{0,420}}\b"
+            rf"(?:the Teacher|he)\s+{speech_action_pattern}\s+"
+            rf"(?:to\s+)?{addressee_pattern}[^.?!\"]{{0,120}}[:,]\s*$"
+        ),
+        (
+            rf"\bBlessed One,\s+(?:going|having|after)\b.{{0,420}}\b"
+            rf"{speech_action_pattern}\s+(?:to\s+)?"
+            rf"{addressee_pattern}[^.?!\"]{{0,120}}[:,]\s*$"
+        ),
     ]
     return any(re.search(pattern, tail, re.IGNORECASE) for pattern in patterns)
 
@@ -807,11 +826,12 @@ def build_direct_rows(
 
 def row_to_markdown(row: dict, index: int, *, preview_chars: int) -> str:
     metadata = row["metadata"]
+    source_lines = metadata["source_lines"]
     detail_lines = [
         f"- Record ID: `{metadata['record_id']}`",
         f"- Kind: `{metadata['kind']}`",
         f"- Section: `{metadata['section']} {metadata['title']}`",
-        f"- Lines: `{metadata['source_file']}:{metadata['source_lines'][0]}-{metadata['source_lines'][1]}`",
+        f"- Lines: `{metadata['source_file']}:{source_lines[0]}-{source_lines[1]}`",
         f"- Target: `{metadata['target_participant']} ({metadata['target_speaker']})`",
         f"- Target words: `{metadata['target_words']}`",
     ]
@@ -842,11 +862,58 @@ def row_to_markdown(row: dict, index: int, *, preview_chars: int) -> str:
     )
 
 
+def write_review_sample(
+    path: Path,
+    *,
+    title: str,
+    items_count: int,
+    rows: list[dict],
+    sample_count: int,
+    preview_chars: int,
+) -> None:
+    sample = select_spread(rows, sample_count)
+    kind_counts = Counter(row["metadata"]["kind"] for row in rows)
+    kind_count_lines = [
+        f"- `{kind}`: `{count}`" for kind, count in sorted(kind_counts.items())
+    ]
+    path.write_text(
+        "\n".join(
+            [
+                f"# {title}",
+                "",
+                f"Items parsed: `{items_count}`",
+                f"Rows parsed: `{len(rows)}`",
+                "",
+                "Rows by kind:",
+                "",
+                *kind_count_lines,
+                "",
+                f"Sampled rows: `{len(sample)}`",
+                "",
+                *[
+                    row_to_markdown(row, idx, preview_chars=preview_chars)
+                    for idx, row in enumerate(sample, 1)
+                ],
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Parse Udana review rows.")
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
-    parser.add_argument("--dataset-name", default="udana_dialogue")
+    parser.add_argument(
+        "--dataset-name",
+        default=None,
+        help=(
+            "Deprecated alias for the exclamation dataset name. Prefer "
+            "--exclamation-dataset-name and --direct-dataset-name."
+        ),
+    )
+    parser.add_argument("--exclamation-dataset-name", default="udana_exclamation_dialogue")
+    parser.add_argument("--direct-dataset-name", default="udana_direct_dialogue")
     parser.add_argument("--min-target-words", type=int, default=12)
     parser.add_argument("--max-target-words", type=int, default=260)
     parser.add_argument("--max-narrative-words", type=int, default=2500)
@@ -887,62 +954,44 @@ def main() -> None:
 
     output_dir = args.output_dir.expanduser().resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
-    jsonl_path = output_dir / f"{args.dataset_name}.jsonl"
-    review_path = output_dir / f"{args.dataset_name}_review_sample.md"
-    direct_review_path = output_dir / f"{args.dataset_name}_direct_review_sample.md"
-    write_jsonl(jsonl_path, rows)
 
-    sample = select_spread(rows, args.sample_count)
-    kind_counts = Counter(row["metadata"]["kind"] for row in rows)
-    kind_count_lines = [
-        f"- `{kind}`: `{count}`" for kind, count in sorted(kind_counts.items())
-    ]
-    review_path.write_text(
-        "\n".join(
-            [
-                "# Udana Review Sample",
-                "",
-                f"Items parsed: `{len(items)}`",
-                f"Rows parsed: `{len(rows)}`",
-                "",
-                "Rows by kind:",
-                "",
-                *kind_count_lines,
-                "",
-                f"Sampled rows: `{len(sample)}`",
-                "",
-                *[
-                    row_to_markdown(row, idx, preview_chars=args.preview_chars)
-                    for idx, row in enumerate(sample, 1)
-                ],
-            ]
-        ),
-        encoding="utf-8",
+    exclamation_dataset_name = args.dataset_name or args.exclamation_dataset_name
+    exclamation_jsonl_path = output_dir / f"{exclamation_dataset_name}.jsonl"
+    exclamation_review_path = output_dir / f"{exclamation_dataset_name}_review_sample.md"
+    write_jsonl(exclamation_jsonl_path, exclamation_rows)
+    write_review_sample(
+        exclamation_review_path,
+        title="Udana Exclamation Review Sample",
+        items_count=len(items),
+        rows=exclamation_rows,
+        sample_count=args.sample_count,
+        preview_chars=args.preview_chars,
     )
-    direct_sample = select_spread(direct_rows, len(direct_rows))
-    direct_review_path.write_text(
-        "\n".join(
-            [
-                "# Udana Direct Reply Review Sample",
-                "",
-                f"Direct rows parsed: `{len(direct_rows)}`",
-                "",
-                *[
-                    row_to_markdown(row, idx, preview_chars=args.preview_chars)
-                    for idx, row in enumerate(direct_sample, 1)
-                ],
-            ]
-        ),
-        encoding="utf-8",
-    )
+
+    direct_jsonl_path: Path | None = None
+    direct_review_path: Path | None = None
+    if not args.final_only:
+        direct_jsonl_path = output_dir / f"{args.direct_dataset_name}.jsonl"
+        direct_review_path = output_dir / f"{args.direct_dataset_name}_review_sample.md"
+        write_jsonl(direct_jsonl_path, direct_rows)
+        write_review_sample(
+            direct_review_path,
+            title="Udana Direct Reply Review Sample",
+            items_count=len(items),
+            rows=direct_rows,
+            sample_count=args.sample_count,
+            preview_chars=args.preview_chars,
+        )
 
     print(f"Items parsed: {len(items)}")
     print(f"Rows written: {len(rows)}")
-    for kind, count in sorted(kind_counts.items()):
-        print(f"{kind}: {count}")
-    print(f"JSONL: {jsonl_path}")
-    print(f"Review: {review_path}")
-    print(f"Direct review: {direct_review_path}")
+    print(f"udana_blessed_one_exclamation: {len(exclamation_rows)}")
+    print(f"Exclamation JSONL: {exclamation_jsonl_path}")
+    print(f"Exclamation review: {exclamation_review_path}")
+    if direct_jsonl_path is not None and direct_review_path is not None:
+        print(f"udana_blessed_one_direct_reply: {len(direct_rows)}")
+        print(f"Direct JSONL: {direct_jsonl_path}")
+        print(f"Direct review: {direct_review_path}")
 
 
 if __name__ == "__main__":

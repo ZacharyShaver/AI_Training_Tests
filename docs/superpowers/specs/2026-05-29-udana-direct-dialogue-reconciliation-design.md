@@ -2,7 +2,19 @@
 
 ## Status
 
-proposed
+implemented 2026-05-29
+
+## Outcome
+
+- `parse_udana.py` now writes exclamation and direct-dialogue row families to
+  separate artifacts by default.
+- The regenerated exclamation artifact contains 80
+  `udana_blessed_one_exclamation` rows.
+- The regenerated direct-dialogue artifact contains 27
+  `udana_blessed_one_direct_reply` rows.
+- The older `udana_dialogue.jsonl` artifact is confirmed as a mixed 107-row
+  legacy artifact and is no longer the manifest or vault target for direct
+  candidate review.
 
 ## Problem
 

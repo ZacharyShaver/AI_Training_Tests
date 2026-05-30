@@ -2,19 +2,17 @@
 
 Updated: 2026-05-25
 
-No paths in this document are approved for deletion or movement. Each candidate
-requires the listed verification and explicit user approval before any cleanup
-command is run.
+Candidates 1–5 in this document are approved for deletion/untracking. Other candidates require the listed verification and explicit user approval before any cleanup command is run.
 
 ## High-Confidence Delete Or Untrack Candidates
 
 | Candidate path | Reason | Required verification | Approval status |
 | --- | --- | --- | --- |
-| `ai_training_tests.egg-info/` | Generated package metadata should not be tracked. The ignore rule now covers `*.egg-info/`. | Confirm package imports and tests work without tracked metadata, then untrack with user approval. | Not approved |
+| `ai_training_tests.egg-info/` | Generated package metadata should not be tracked. The ignore rule now covers `*.egg-info/`. | Confirm package imports and tests work without tracked metadata, then untrack with user approval. | Approved |
 | `.codegraph/codegraph.db` | Generated local CodeGraph index state. | Confirm `.codegraph/.gitignore` or root `.gitignore` keeps the DB untracked. | Not approved |
 | `Obsidian/.obsidian/workspace.json` | Obsidian local UI workspace state is noisy in shared repo history. | Confirm shared vault settings do not require committing workspace state. | Not approved |
-| `review_outputs/full_dialogue_dataset/full_dialogue_dataset.jsonl` | Appears to overlap with `review_outputs/full_dialogue_dataset/full_combined_dialogue_dataset.jsonl`. | Compare file hashes and check references before deleting or replacing with a docs pointer. | Not approved |
-| `review_outputs/new_buddhist_sources/zen_koans_database_dialogue.jsonl` | Appears to overlap with `review_outputs/new_buddhist_sources/zen_koans_database_clean_dialogue.jsonl`. | Compare file hashes and check parser/docs references. | Not approved |
+| `review_outputs/full_dialogue_dataset/full_dialogue_dataset.jsonl` | Appears to overlap with `review_outputs/full_dialogue_dataset/full_combined_dialogue_dataset.jsonl`. | Compare file hashes and check references before deleting or replacing with a docs pointer. | Approved |
+| `review_outputs/new_buddhist_sources/zen_koans_database_dialogue.jsonl` | Appears to overlap with `review_outputs/new_buddhist_sources/zen_koans_database_clean_dialogue.jsonl`. | Compare file hashes and check parser/docs references. | Approved |
 
 ## Archive Or Delete After Review
 
@@ -22,7 +20,7 @@ command is run.
 | --- | --- | --- | --- |
 | `review_outputs/initial_dialogue_dataset/` | Older snapshot appears superseded by the full dataset. | Confirm no unique records are absent from final outputs. | Not approved |
 | `review_outputs/pilot_dialogue_dataset/` | Older pilot snapshot appears superseded by the full dataset. | Confirm current full rebuild can regenerate any still-needed base rows. | Not approved |
-| `Training Data/Test Conversations/dual_model_demo_*.jsonl` | These appear duplicated by `Training Data/cleaned_pipeline/cleaned_dialogue/`. | Compare hashes and decide the canonical transcript-derived folder. | Not approved |
+| `Training Data/Test Conversations/dual_model_demo_*.jsonl` | These appear duplicated by `Training Data/cleaned_pipeline/cleaned_dialogue/`. | Compare hashes and decide the canonical transcript-derived folder. | Approved |
 | `review_outputs/new_buddhist_sources/*_direct_review_sample.md` | Some direct review sample files may be empty or failed sample artifacts. | Open each file and confirm whether durable review content exists. | Not approved |
 | `.claude/CLAUDE.md` | Tool-specific guidance may overlap `AGENTS.md` and general CodeGraph docs. | Preserve as Claude-only guidance, or move general guidance into `docs/tooling/codegraph.md` after review. | Not approved |
 

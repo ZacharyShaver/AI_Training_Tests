@@ -1,5 +1,5 @@
 window.PROJECT_PROGRESS = {
-  "generated_at": "2026-05-25",
+  "generated_at": "2026-05-29",
   "goals": {
     "buddhist_lines": 1200,
     "occult_lines": 1200
@@ -171,8 +171,8 @@ window.PROJECT_PROGRESS = {
     {
       "family": "buddhist",
       "source": "Udana direct dialogue rows",
-      "reason": "Current final set uses exclamation rows only; direct dialogue candidates can be reviewed separately.",
-      "current_artifact": "review_outputs/new_buddhist_sources/udana_dialogue.jsonl"
+      "reason": "Current final set uses exclamation rows only; the direct-only candidate artifact currently has 27 rows for separate review.",
+      "current_artifact": "review_outputs/new_buddhist_sources/udana_direct_dialogue.jsonl"
     },
     {
       "family": "occult",
@@ -192,17 +192,17 @@ window.PROJECT_PROGRESS = {
     {
       "path": "ai_training_tests.egg-info/",
       "reason": "Generated package metadata should not be tracked.",
-      "status": "not approved"
+      "status": "approved"
     },
     {
       "path": "review_outputs/full_dialogue_dataset/full_dialogue_dataset.jsonl",
       "reason": "Appears to overlap with full_combined_dialogue_dataset.jsonl; compare hashes before any cleanup.",
-      "status": "not approved"
+      "status": "approved"
     },
     {
       "path": "review_outputs/new_buddhist_sources/zen_koans_database_dialogue.jsonl",
       "reason": "Appears to overlap with zen_koans_database_clean_dialogue.jsonl; compare hashes and references before cleanup.",
-      "status": "not approved"
+      "status": "approved"
     }
   ]
 };

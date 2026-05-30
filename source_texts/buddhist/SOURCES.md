@@ -28,6 +28,22 @@
   clean public-domain English translation unless a clearer license is found.
 - Local file: `raw/blue_cliff_record_wonderwheel_wayback.html`
 
+## Milindapañha / SuttaCentral
+
+- Source: SuttaCentral Milinda section exports, cached locally and consolidated into
+  one canonical clean text.
+- Base URL: `https://suttacentral.net/`
+- Primary translation preference: John Kelly (`kelly`).
+- Fallback translation when Kelly is missing for a section: T.W. Rhys Davids
+  (`tw_rhysdavids`).
+- Raw cache: `raw/milindapanha_suttacentral/`
+- Export manifest: `raw/milindapanha_suttacentral/export_manifest.json`
+- Canonical clean export: `clean/milindapanha_suttacentral.txt`
+- Legacy mirror target: `../oritiginal text/Milinda Panha.txt`
+- License/status note: SuttaCentral serves Rhys Davids as public-domain text and
+  Kelly as site translation content; use the export manifest to track which
+  translation was used per section before redistribution decisions.
+
 ## User-Supplied Buddhist PDFs
 
 These files were placed in `source_texts/buddhist/raw/` and converted locally with

@@ -43,7 +43,7 @@ def main() -> None:
     output_dir = args.output_dir.expanduser().resolve()
     new_buddhist_dir = args.new_buddhist_dir.expanduser().resolve()
     new_esoteric_dir = args.new_esoteric_dir.expanduser().resolve()
-    base_jsonl = output_dir / "full_dialogue_dataset.jsonl"
+    base_jsonl = output_dir / "full_combined_dialogue_dataset.jsonl"
 
     run_script(
         "build_pilot_dialogue_dataset.py",

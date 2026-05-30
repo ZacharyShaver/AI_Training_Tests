@@ -29,6 +29,10 @@ data.
 
 - Blue Cliff Record: candidate outputs exist and need parser/sample review.
 - Dhammapada Commentary: candidate review sample exists.
+- Milinda Panha (SuttaCentral export): dedicated parser now writes `25`
+  candidate rows and has a first random review packet under
+  `review_outputs/parser_reviews/parse_milinda_panha/`, but the legacy builder
+  still supplies the live final rows.
 - Udana direct dialogue rows: separate from the final exclamation-row output.
 - Additional Majjhima Nikaya pass: possible if the 190-row candidate is promoted.
 

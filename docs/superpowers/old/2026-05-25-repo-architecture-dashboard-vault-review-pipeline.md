@@ -870,15 +870,15 @@ Expected: no stale old-count references unless explicitly marked historical.
 
 List each candidate with verification evidence.
 
-- [ ] **Step 2: Wait for explicit approval**
+- [x] **Step 2: Wait for explicit approval**
 
 Do not delete or move files until the user approves specific paths.
 
-- [ ] **Step 3: Apply approved cleanup only**
+- [x] **Step 3: Apply approved cleanup only**
 
 Use `git rm` or `git mv` for tracked files and update docs/scripts in the same commit.
 
-- [ ] **Step 4: Verify no broken references**
+- [x] **Step 4: Verify no broken references**
 
 Run:
 
