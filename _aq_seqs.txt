@@ -1,0 +1,17 @@
+Q->A sequences: 6
+
+Q at L7473, A at L7481:
+  L7473: 8  And Mary said, Why Jesus, why do you treat your parents thus? Lo,
+  L7475: we have sought two days for you. We feared that some great harm had
+  L7477: overtaken you.
+  L7481: 9  And Jesus said, Do you not know that I must be about my Father’s
+  L7483: work?
+  L7487: 10  But he went round and pressed the hand of every doctor of the law
+
+Q at L9953, A at L9959:
+  L9953: 7  The man replied, Of heaven we have heard; but then it is so far
+  L9955: away, and we must live so many lives before we reach that place!
+  L9959: 8  And Jesus said, My brother, man, your thoughts are wrong; your
+  L9961: heaven is not far away; and it is not a place of metes and bounds, is
+  L9963: not a country to be reached; it is a state of mind.
+

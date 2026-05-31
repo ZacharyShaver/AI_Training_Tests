@@ -23,13 +23,18 @@ from ai_training_tests.extraction.common.text_cleaning import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_SOURCE = REPO_ROOT / "source_texts/buddhist/clean/milindapanha_suttacentral.txt"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "review_outputs/new_buddhist_sources"
+DEFAULT_MIN_TARGET_WORDS = 5
 KING_MILINDA = "King Milinda"
 VEN_NAGASENA = "Venerable N\u0101gasena"
 SECTION_RE = re.compile(r"^## (?P<section>mil[\d.]+)$", re.IGNORECASE)
-QUOTED_TEXT_RE = re.compile(r'"([^"]+)"')
 SPEAKER_CUE_RE = re.compile(
     "^(?:Then,?\\s+)?(?P<speaker>King Milinda|Venerable (?:N\u0101gasena|Nagasena))\\s+"
     "(?:said|asked|replied|answered|declared)\\b.*$",
+    re.IGNORECASE,
+)
+SPEAKER_CUE_FRAGMENT_RE = re.compile(
+    "(?P<speaker>King Milinda|Venerable (?:N\u0101gasena|Nagasena))\\s+"
+    "(?:said(?:\\s+this)?|asked|replied|answered|declared)\\b",
     re.IGNORECASE,
 )
 
@@ -111,24 +116,52 @@ def infer_speaker(pending_speaker: str | None, previous_turn: Turn | None, secti
     return alternate_speaker(previous_turn.speaker)
 
 
+def speaker_from_fragment(text: str) -> str | None:
+    matches = list(SPEAKER_CUE_FRAGMENT_RE.finditer(text))
+    if not matches:
+        return None
+    return canonical_speaker(matches[-1].group("speaker"))
+
+
+def iter_inline_quotes(text: str) -> list[tuple[str, str]]:
+    quotes: list[tuple[str, str]] = []
+    cursor = 0
+    while True:
+        start = text.find('"', cursor)
+        if start == -1:
+            break
+        end = text.find('"', start + 1)
+        if end == -1:
+            break
+        quote = clean_dataset_text(text[start + 1 : end])
+        if quote:
+            quotes.append((text[cursor:start], quote))
+        cursor = end + 1
+    return quotes
+
+
 def extract_inline_turns(line: Line, speaker: str) -> list[Turn]:
     turns: list[Turn] = []
     current_speaker: str | None = speaker
-    for match in QUOTED_TEXT_RE.finditer(line.text):
+    for prefix, quote in iter_inline_quotes(line.text):
+        explicit_speaker = speaker_from_fragment(prefix)
+        if explicit_speaker is not None:
+            current_speaker = explicit_speaker
         if current_speaker is None:
             break
-        quote = clean_dataset_text(match.group(1))
-        if not quote:
-            continue
-        turns.append(
-            Turn(
-                speaker=current_speaker,
-                text=quote,
-                start_line=line.line_no,
-                end_line=line.line_no,
-                section_ref=line.section_ref,
+        if turns and turns[-1].speaker == current_speaker:
+            turns[-1].text = clean_dataset_text(f"{turns[-1].text} {quote}")
+            turns[-1].end_line = line.line_no
+        else:
+            turns.append(
+                Turn(
+                    speaker=current_speaker,
+                    text=quote,
+                    start_line=line.line_no,
+                    end_line=line.line_no,
+                    section_ref=line.section_ref,
+                )
             )
-        )
         current_speaker = alternate_speaker(current_speaker)
     return turns
 
@@ -338,7 +371,7 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--dataset-name", default="milinda_panha_dialogue")
     parser.add_argument("--max-history-turns", type=int, default=6)
-    parser.add_argument("--min-target-words", type=int, default=3)
+    parser.add_argument("--min-target-words", type=int, default=DEFAULT_MIN_TARGET_WORDS)
     parser.add_argument("--max-target-words", type=int, default=260)
     parser.add_argument("--sample-count", type=int, default=10)
     parser.add_argument("--preview-chars", type=int, default=1400)

@@ -1,0 +1,288 @@
+# Random Sample Review Packet
+
+Source JSONL: `review_outputs/parser_reviews/parse_milinda_panha/set_02/milinda_panha_dialogue_set_02.jsonl`
+Rows: `10`
+
+## Reviewer Criteria
+
+- Prompt and reply preserve source continuity.
+- Speaker labels are coherent and not malformed.
+- Assistant target is the next reply only.
+- No page headers, footnotes, OCR bleed, or commentary contamination.
+
+## Rows
+
+### Row 1
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_41:15-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[15, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): Is the flag-staff the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Is the yoke the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Are the reins the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+Is the goad the chariot?
+```
+
+### Row 2
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_29:13-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[13, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): Certainly not, your majesty.
+Participant A (King Milinda): Then, who here is Nāgasena? You speak a falsehood, venerable sir, there is no Nāgasena.
+Participant B (Venerable Nāgasena): You are, your majesty, a delicate noble, exceedingly delicate. For one going on foot at midday, on the scorching ground, the hot sand, the rough, sharp pebbles and gravel, the feet are sore, the body is tired, the mind is upset, and body consciousness arises accompanied by suffering. Did you come on foot or rather in a vehicle?
+Participant A (King Milinda): I did not come on foot, venerable sir, I came in a chariot.
+Participant B (Venerable Nāgasena): If, your majesty, you came in a chariot, tell me about a chariot. Is the carriage pole the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+Is the axle the chariot?
+```
+
+### Row 3
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_25:13-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[13, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): Certainly not, your majesty.
+Participant A (King Milinda): Then, venerable sir, is something other than form, feeling, perception, formations, consciousness combined Nāgasena?
+Participant B (Venerable Nāgasena): Certainly not, your majesty.
+Participant A (King Milinda): Though, venerable sir, I am asking you repeatedly, I do not see Nāgasena. Is Nāgasena only the sound 'Nāgasena'?
+Participant B (Venerable Nāgasena): Certainly not, your majesty.
+Participant A (King Milinda): Then, who here is Nāgasena? You speak a falsehood, venerable sir, there is no Nāgasena.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+You are, your majesty, a delicate noble, exceedingly delicate. For one going on foot at midday, on the scorching ground, the hot sand, the rough, sharp pebbles and gravel, the feet are sore, the body is tired, the mind is upset, and body consciousness arises accompanied by suffering. Did you come on foot or rather in a vehicle?
+```
+
+### Row 4
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_45:15-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[15, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): Are the reins the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Is the goad the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Then, your majesty, are the carriage pole, axle, wheels, body of the chariot, flag-staff, yoke, reins, and goad the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+Then, your majesty, is something apart from the carriage pole, axle, wheels, body of the chariot, flag-staff, yoke, reins, and goad the chariot?
+```
+
+### Row 5
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_35:15-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[15, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): Is the axle the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Are the wheels the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Is the body of the chariot the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+Is the flag-staff the chariot?
+```
+
+### Row 6
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_49:15-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[15, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): Then, your majesty, are the carriage pole, axle, wheels, body of the chariot, flag-staff, yoke, reins, and goad the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Then, your majesty, is something apart from the carriage pole, axle, wheels, body of the chariot, flag-staff, yoke, reins, and goad the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Though, your majesty, I am asking you repeatedly, I do not see a chariot. Is a chariot only the sound 'chariot'?
+Participant A (King Milinda): Certainly not, venerable sir.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+Then, what here is a chariot? You speak a falsehood, your majesty, there is no chariot. You are, your majesty, a mighty king of all Jambudīpa, who then do you fear that you speak a falsehood. May the venerable five hundred Bactrian Greeks and the eighty thousand bhikkhus hear me. This King Milinda said, 'I came by chariot'. But, on being told, 'if, your majesty, you came by chariot, declare to me a chariot,' he is unable to produce a chariot. Is it proper to approve that?
+```
+
+### Row 7
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_39:15-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[15, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): Is the body of the chariot the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Is the flag-staff the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Is the yoke the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+Are the reins the chariot?
+```
+
+### Row 8
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_33:15-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[15, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): If, your majesty, you came in a chariot, tell me about a chariot. Is the carriage pole the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Is the axle the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Are the wheels the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+Is the body of the chariot the chariot?
+```
+
+### Row 9
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_31:15-15:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[15, 15]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant B (Venerable Nāgasena): You are, your majesty, a delicate noble, exceedingly delicate. For one going on foot at midday, on the scorching ground, the hot sand, the rough, sharp pebbles and gravel, the feet are sore, the body is tired, the mind is upset, and body consciousness arises accompanied by suffering. Did you come on foot or rather in a vehicle?
+Participant A (King Milinda): I did not come on foot, venerable sir, I came in a chariot.
+Participant B (Venerable Nāgasena): If, your majesty, you came in a chariot, tell me about a chariot. Is the carriage pole the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+Participant B (Venerable Nāgasena): Is the axle the chariot?
+Participant A (King Milinda): Certainly not, venerable sir.
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+Are the wheels the chariot?
+```
+
+### Row 10
+
+- Record ID: `milindapanha-suttacentral-txt:quoted_buddhist_next_reply_1:11-11:venerable-n-gasena`
+- Source: `Milinda Panha`
+- Source file: `milindapanha_suttacentral.txt`
+- Source lines: `[11, 11]`
+- Assistant target: `Participant B (Venerable Nāgasena)`
+
+#### Prompt
+
+```text
+Conversation so far:
+Participant A (King Milinda): How is the reverend one known, what is your name, venerable sir?
+
+Write Participant B's next reply.
+```
+
+#### Assistant Target
+
+```text
+I am called Nāgasena, your majesty, my holy life companions address me as Nāgasena. Though parents make such names as Nāgasena, or Sūrasena, or Vīrasena, or Sīhasena, your majesty, Nāgasena is only a concept, a designation, a label, an appellation, a mere name; no person actually obtains here.
+```

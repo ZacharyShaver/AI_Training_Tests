@@ -1,0 +1,70 @@
+Title: Plato's Gorgias
+Total lines: 7029
+Speakers:
+  SOCRATES: 530
+  CALLICLES: 236
+  POLUS: 207
+  GORGIAS: 97
+  CHAEREPHON: 15
+  States: 2
+  Title: 1
+  Author: 1
+  Translator: 1
+  Language: 1
+  Credits: 1
+  Socratic Dialogues: 1
+  Socrates: 1
+  Tiring: 1
+  Cookery: 1
+  Nicomachean Ethics: 1
+  Philebus: 1
+  Gorgias: 1
+  Ricardo: 1
+  Republic: 1
+  Phaedrus: 1
+  SCENE: 1
+  Blessed: 1
+  START: 1
+  License: 1
+  Revenue Service: 1
+
+Sample dialogue:
+L201: if these things are true, then, as he says with real emotion, the
+L202: foundations of society are upside down. In him another type of
+L203: character is represented; he is neither sophist nor philosopher, but
+L204: man of the world, and an accomplished Athenian gentleman. He might be
+L205: described in modern language as a cynic or materialist, a lover of
+L206: power and also of pleasure, and unscrupulous in his means of attaining
+L207: both. There is no desire on his part to offer any compromise in the
+L208: interests of morality; nor is any concession made by him. Like
+L209: Thrasymachus in the Republic, though he is not of the same weak and
+L210: vulgar class, he consistently maintains that might is right. His great
+L211: motive of action is political ambition; in this he is
+L212: characteristically Greek. Like Anytus in the Meno, he is the enemy of
+L213: the Sophists; but favours the new art of rhetoric, which he regards as
+L214: an excellent weapon of attack and defence. He is a despiser of mankind
+L215: as he is of philosophy, and sees in the laws of the state only a
+L216: violation of the order of nature, which intended that the stronger
+L217: should govern the weaker (compare Republic). Like other men of the
+L218: world who are of a speculative turn of mind, he generalizes the bad
+L219: side of human nature, and has easily brought down his principles to his
+L220: practice. Philosophy and poetry alike supply him with distinctions
+L221: suited to his view of human life. He has a good will to Socrates, whose
+L222: talents he evidently admires, while he censures the puerile use which
+L223: he makes of them. He expresses a keen intellectual interest in the
+L224: argument. Like Anytus, again, he has a sympathy with other men of the
+L225: world; the Athenian statesmen of a former generation, who showed no
+L226: weakness and made no mistakes, such as Miltiades, Themistocles,
+L227: Pericles, are his favourites. His ideal of human character is a man of
+L228: great passions and great powers, which he has developed to the utmost,
+L229: and which he uses in his own enjoyment and in the government of others.
+L230: Had Critias been the name instead of Callicles, about whom we know
+L231: nothing from other sources, the opinions of the man would have seemed
+L232: to reflect the history of his life.
+L234: And now the combat deepens. In Callicles, far more than in any sophist
+L235: or rhetorician, is concentrated the spirit of evil against which
+L236: Socrates is contending, the spirit of the world, the spirit of the many
+L237: contending against the one wise man, of which the Sophists, as he
+L238: describes them in the Republic, are the imitators rather than the
+L239: authors, being themselves carried away by the great tide of public
+L240: opinion. Socrates approaches his antagonist warily from a distance,

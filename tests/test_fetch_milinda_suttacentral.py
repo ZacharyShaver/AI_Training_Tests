@@ -54,15 +54,18 @@ def test_render_consolidated_text_keeps_headings_and_dialogue() -> None:
 
     assert "## mil3.1.1" in text
     assert "King Milinda" in text
-    assert "Nāgasena" in text
     assert "unsupported browser" not in text.lower()
+    assert 'Nāgasena replied, "People know me as Nāgasena, great king."' in text
+    assert 'King Milinda asked, "Is Nāgasena your permanent self?"' in text
+    assert "NÄ" not in text
+    assert "â€" not in text
 
 
 def test_parse_suttacentral_page_reads_translation_text_from_sutta_json() -> None:
     payload = """
     {
       "mil3.1.1:0.1": "King Milinda said, \\"Who are you, venerable sir?\\"",
-      "mil3.1.1:0.2": "Nāgasena replied, \\"People know me as Nāgasena, great king.\\""
+      "mil3.1.1:0.2": "NÄgasena replied, \\"People know me as NÄgasena, great king.\\""
     }
     """
 
@@ -70,8 +73,8 @@ def test_parse_suttacentral_page_reads_translation_text_from_sutta_json() -> Non
     text = render_consolidated_text([page])
 
     assert "## mil3.1.1" in text
-    assert "King Milinda said" in text
-    assert "Nāgasena replied" in text
+    assert 'King Milinda said, "Who are you, venerable sir?"' in text
+    assert 'Nāgasena replied, "People know me as Nāgasena, great king."' in text
 
 
 def test_parse_suttacentral_page_reads_title_and_text_from_bilara_payload() -> None:
@@ -81,7 +84,7 @@ def test_parse_suttacentral_page_reads_title_and_text_from_bilara_payload() -> N
         "title": "The Opening Question"
       }
     ,
-      "mil3.1.1:0.1": "Then, King Milinda approached Nāgasena.",
+      "mil3.1.1:0.1": "Then, King Milinda approached NÄgasena.",
       "mil3.1.1:0.2": "How is the reverend one known?"
     }
     """
@@ -104,7 +107,7 @@ def test_parse_suttacentral_page_reads_html_from_api_payload() -> None:
       },
       "translation": {
         "title": "Individuality and name; the chariot simile",
-        "text": "<!DOCTYPE html><html><body><article id='mil3.1.1'><header><ul><li class='division'>The Questions of King Milinda</li></ul><h1>3.1.1. Individuality and name; the chariot simile</h1></header><p><a class='ref pts-vp-en' href='#pts-vp-en40'>PTS vp En 40</a>Now Milinda the king went up to where the venerable NÄgasena was.</p><p>And Milinda began by asking, ‘How is your Reverence known?’</p><footer><p>This text is in the public domain.</p></footer></article></body></html>"
+        "text": "<!DOCTYPE html><html><body><article id='mil3.1.1'><header><ul><li class='division'>The Questions of King Milinda</li></ul><h1>3.1.1. Individuality and name; the chariot simile</h1></header><p><a class='ref pts-vp-en' href='#pts-vp-en40'>PTS vp En 40</a>Now Milinda the king went up to where the venerable NÃ„Âgasena was.</p><p>And Milinda began by asking, â€˜How is your Reverence known?â€™</p><footer><p>This text is in the public domain.</p></footer></article></body></html>"
       }
     }
     """
@@ -114,8 +117,8 @@ def test_parse_suttacentral_page_reads_html_from_api_payload() -> None:
     assert page.headings == ["The Questions of King Milinda"]
     assert page.title == "3.1.1. Individuality and name; the chariot simile"
     assert page.paragraphs == [
-        "Now Milinda the king went up to where the venerable NÄgasena was.",
-        "And Milinda began by asking, ‘How is your Reverence known?’",
+        "Now Milinda the king went up to where the venerable Nāgasena was.",
+        "And Milinda began by asking, 'How is your Reverence known?'",
     ]
 
 
@@ -156,7 +159,7 @@ def test_extract_html_from_bilarasutta_payload_reconstructs_page_html() -> None:
         "mil3.1.1:1.1": "<p>{}</p></article>"
       },
       "translation_text": {
-        "mil3.1.1:0.1": "Milinda’s Questions",
+        "mil3.1.1:0.1": "Milindaâ€™s Questions",
         "mil3.1.1:0.2": "Great Chapter",
         "mil3.1.1:1.1": "King Milinda spoke."
       },
@@ -170,7 +173,7 @@ def test_extract_html_from_bilarasutta_payload_reconstructs_page_html() -> None:
 
     html = extract_html_from_bilarasutta_payload(payload)
 
-    assert "<li class='division'>Milinda’s Questions</li>" in html
+    assert "<li class='division'>Milindaâ€™s Questions</li>" in html
     assert "<li>Great Chapter</li>" in html
     assert "<p>King Milinda spoke.</p>" in html
 

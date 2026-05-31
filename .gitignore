@@ -18,3 +18,8 @@ Obsidian/.obsidian/
 .*_cache
 *__pycache__
 .aider*
+.codex*
+.github
+.pytest*
+.remember
+.vscode

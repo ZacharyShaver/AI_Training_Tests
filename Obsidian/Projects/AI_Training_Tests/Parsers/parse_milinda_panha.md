@@ -11,19 +11,21 @@
 
 ## Status
 
-candidate
+parked
 
 ## Source And Outputs
 
 This parser is the new Milinda path built on the SuttaCentral export rather than
 the OCR-heavy legacy text under `oritiginal text/`. It is not the live final
-Milinda path yet; the legacy base builder still supplies the current final rows
-until this parser clears review.
+Milinda path; the legacy base builder still supplies the current final rows, and
+this candidate line is now parked after a low-yield refresh.
 
 ## Current Snapshot
 
-- Latest local smoke run: `55` turns parsed, `25` candidate rows written.
-- First parser-review packet: `review_outputs/parser_reviews/parse_milinda_panha/set_01/`
+- Latest candidate refresh: `14` rows after source-boundary cleanup and a
+  stricter minimum target floor.
+- Review packets: `set_01/` baseline at `25` rows and `set_02/` refresh at
+  `14` rows.
 - Current live final Milinda rows still come from [[base_dialogue_dataset]].
 
 ## Extraction Strategy
@@ -42,24 +44,38 @@ until this parser clears review.
   reproducible.
 - Same-paragraph cue-plus-quote lines can be recovered once the parser preserves
   raw section headers and consumes inline quoted turns directly.
+- Source-boundary mojibake cleanup is more reliable than trying to patch broken
+  speaker names later inside parser-only logic.
 
-## Known Current Limitations
+## Durable Patterns That Failed
 
-- The candidate pool is still smaller than the old live Milinda coverage.
-- Some exported text still shows mojibake such as `NÄgasena`, so the ingest or
-  normalization layer needs another encoding pass.
-- Multi-quote alternation needs review before promotion because some long
-  same-line exchanges may still mis-assign speakers.
+- Even after the cleaner export and speaker fixes, the candidate pool stayed too
+  small to justify further Milinda-focused iteration right now.
+- Tightening target quality removed several stock-reply rows, which improved the
+  pool quality but confirmed the limited upside of this source.
+
+## Current Review Snapshot
+
+- `review_outputs/parser_reviews/parse_milinda_panha/pass_history.md` still
+  shows `0` consecutive fully approved sets because this parser was parked
+  rather than pushed through the full three-pass approval loop.
+- This note should be treated as a non-final reference path, not the next
+  Buddhist promotion target.
 
 ## Evidence
 
 - `source_texts/buddhist/clean/milindapanha_suttacentral.txt`
 - `review_outputs/new_buddhist_sources/milinda_panha_dialogue.jsonl`
-- `review_outputs/parser_reviews/parse_milinda_panha/set_01/run_summary.md`
-- `review_outputs/parser_reviews/parse_milinda_panha/set_01/milinda_panha_dialogue_set_01_random_review.md`
+- `review_outputs/parser_reviews/parse_milinda_panha/set_02/run_summary.md`
+- `review_outputs/parser_reviews/parse_milinda_panha/set_02/milinda_panha_dialogue_set_02_random_review.md`
 
 ## Related Notes
 
 - [[Parser Hub]]
 - [[base_dialogue_dataset]]
 - [[../Sources/Buddhist Sources]]
+
+## Next Likely Improvements
+
+- None scheduled. Revisit only if a broader Milinda objective returns or the
+  Buddhist source backlog thins out.

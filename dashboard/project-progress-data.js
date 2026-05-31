@@ -1,12 +1,12 @@
 window.PROJECT_PROGRESS = {
-  "generated_at": "2026-05-29",
+  "generated_at": "2026-05-31",
   "goals": {
     "buddhist_lines": 1200,
     "occult_lines": 1200
   },
   "totals": {
-    "buddhist_lines": 854,
-    "occult_lines": 423,
+    "buddhist_lines": 1206,
+    "occult_lines": 1397,
     "combined_lines": 1277
   },
   "source_groups": {
@@ -14,16 +14,27 @@ window.PROJECT_PROGRESS = {
       "label": "Buddhist",
       "target_lines": 1200,
       "family": "buddhist",
-      "lines": 854
+      "lines": 1206
     },
     "occult": {
       "label": "Occult / Esoteric",
       "target_lines": 1200,
       "family": "occult",
-      "lines": 423
+      "lines": 1397
     }
   },
   "sources": [
+    {
+      "family": "buddhist",
+      "source": "Bilara Pali Canon (DN + SN Sagathavagga)",
+      "source_file": "source_texts/buddhist/raw/bilara-data/translation/en/sujato/sutta",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_buddhist_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_bilara_pali_dialogue.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_bilara_pali_dialogue.md",
+      "status": "final",
+      "notes": "352 rows from DN (11 complex suttas excluded) + SN1-11 Sagathavagga. Local bilara-data GitHub clone, no network calls. Approved 2026-05-31 after 3 consecutive clean passes.",
+      "rows": 0
+    },
     {
       "family": "buddhist",
       "source": "Itivuttaka",
@@ -126,6 +137,61 @@ window.PROJECT_PROGRESS = {
     },
     {
       "family": "occult",
+      "source": "Plato's Philebus (Jowett translation)",
+      "source_file": "source_texts/occult/raw/plato_philebus_jowett.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_plato_philebus.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_plato_philebus.md",
+      "status": "final",
+      "notes": "283 rows. SOCRATES:PROTARCHUS:PHILEBUS format. Gutenberg 1744, Jowett translation. Socrates = Participant B. 3 clean passes (set_01-03); approved 2026-05-31. Debate on pleasure vs. knowledge — classified esoteric/Neoplatonic.",
+      "rows": 0
+    },
+    {
+      "family": "occult",
+      "source": "Plato's Gorgias (Jowett translation)",
+      "source_file": "source_texts/occult/raw/plato_gorgias_jowett.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_plato_gorgias.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_plato_gorgias.md",
+      "status": "final",
+      "notes": "262 rows. SOCRATES:CALLICLES:POLUS:GORGIAS format. Gutenberg 1672, Jowett translation. Socrates = Participant B. 3 clean passes (set_01-03); approved 2026-05-31. Classified as esoteric/Neoplatonic (per Theosophical tradition).",
+      "rows": 0
+    },
+    {
+      "family": "occult",
+      "source": "Theosophy Explained in Questions and Answers (Pavri)",
+      "source_file": "source_texts/occult/raw/theosophy_explained_pavri_djvu.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_theosophy_explained_pavri.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_theosophy_explained_pavri.md",
+      "status": "final",
+      "notes": "97 rows. P. Pavri's theosophical Q&A (Theosophical Publishing House, Adyar). Q./Ans. format. DjVu OCR source from Internet Archive. 3 clean passes (set_01-03); approved 2026-05-31.",
+      "rows": 0
+    },
+    {
+      "family": "occult",
+      "source": "Corpus Hermeticum (v2 standalone parser)",
+      "source_file": "oritiginal text/The Corpus Hermeticum.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_corpus_hermeticum.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_corpus_hermeticum.md",
+      "status": "final",
+      "notes": "44 rows. GRS Mead translation of 13 tractates. Speaker H:/A:/T: format, Hermes as target. 3 clean passes (set_01-03); approved 2026-05-31. Supplements the 28 rows from build_pilot_dialogue_dataset.py.",
+      "rows": 0
+    },
+    {
+      "family": "occult",
+      "source": "Transactions of the Blavatsky Lodge",
+      "source_file": "source_texts/occult/clean/transactions_blavatsky_lodge.txt",
+      "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
+      "parser": "scripts/extraction/parse_transactions_blavatsky_lodge.py",
+      "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/parse_transactions_blavatsky_lodge.md",
+      "status": "final",
+      "notes": "288 rows. HPB answering student questions about The Secret Doctrine at Blavatsky Lodge meetings (1889). Q./A. format. 3 clean passes (set_01-03); approved 2026-05-31.",
+      "rows": 288
+    },
+    {
+      "family": "occult",
       "source": "Asclepius",
       "source_file": "oritiginal text/Asclepius.txt",
       "final_dataset": "review_outputs/full_dialogue_dataset/full_esoteric_dialogue_dataset.jsonl",
@@ -142,7 +208,7 @@ window.PROJECT_PROGRESS = {
       "parser": "scripts/extraction/build_pilot_dialogue_dataset.py",
       "vault_note": "Obsidian/Projects/AI_Training_Tests/Parsers/base_dialogue_dataset.md",
       "status": "final",
-      "rows": 28
+      "rows": 72
     },
     {
       "family": "occult",

@@ -1,0 +1,5 @@
+ID 1616: Protagoras (0L) - {}
+ID 1512: Philebus (0L) - {}
+ID 1744: Laches (6044L) - {'SOCRATES': 569, 'PROTARCHUS': 558, 'PHILEBUS': 17}
+ID 1735: Euthydemus (6073L) - {'THEODORUS': 6, 'SOCRATES': 7, 'STRANGER': 579, 'THEAETETUS': 578}
+ID 59047: Sophist (0L) - {}

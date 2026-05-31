@@ -1,0 +1,11 @@
+ID 1584: Timaeus - SOCRATES: 112
+ID 1672: Gorgias - SOCRATES: 17
+ID 1658: Phaedo - SOCRATES: 12
+ID 1726: Theaetetus - SOCRATES: 10
+ID 1497: Republic - SOCRATES: 9
+ID 1616: Protagoras - SOCRATES: 8
+ID 1735: Euthydemus - SOCRATES: 4
+ID 1744: Laches - SOCRATES: 3
+ID 1368: Meno - SOCRATES: 0
+ID 1464: Apology - SOCRATES: 0
+ID 56771: Euthyphro - SOCRATES: 0

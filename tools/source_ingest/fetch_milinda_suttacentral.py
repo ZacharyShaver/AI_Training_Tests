@@ -1,11 +1,22 @@
 #!/usr/bin/env python3
-"""Fetch and consolidate Milinda Panha pages from SuttaCentral."""
+"""Fetch and consolidate Milinda Panha pages from SuttaCentral.
+
+DEPRECATED FOR NEW WORK: The Milindapañha is extra-canonical and is NOT
+present in the bilara-data GitHub repo. For all canonical Pali suttas
+(DN, MN, SN, AN, KN) use tools/source_ingest/bilara_reader.py instead,
+which reads from the local bilara-data clone with zero network calls.
+
+This script exists only if the Milinda clean-text cache needs refreshing.
+The cached output is at source_texts/buddhist/clean/milindapanha_suttacentral.txt
+and does not need to be re-fetched unless the source translation changes.
+"""
 
 from __future__ import annotations
 
 import argparse
 import json
 import re
+import sys
 import urllib.request
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
@@ -14,6 +25,12 @@ from urllib.parse import urljoin
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+SRC_ROOT = REPO_ROOT / "src"
+if str(SRC_ROOT) not in sys.path:
+    sys.path.insert(0, str(SRC_ROOT))
+
+from ai_training_tests.extraction.common.text_cleaning import normalize_text
+
 BASE_URL = "https://suttacentral.net/"
 INDEX_URL = urljoin(BASE_URL, "api/suttaplex/mil")
 INDEX_FALLBACK_URL = urljoin(BASE_URL, "api/range_suttaplex/mil")
@@ -129,7 +146,7 @@ class SuttaCentralPageParser(HTMLParser):
 def clean_text(text: str) -> str:
     text = text.replace("\xa0", " ")
     text = WHITESPACE_RE.sub(" ", text)
-    return text.strip()
+    return normalize_text(text)
 
 
 def is_site_chrome(text: str) -> bool:
