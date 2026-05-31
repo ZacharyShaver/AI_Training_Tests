@@ -2,22 +2,24 @@
 """Streamlit app for running a timed two-model conversation via LM Studio.
 
 The app talks to an LM Studio local server using its OpenAI-compatible API.
-By default it expects the server to be running at http://localhost:8000.
+The default base URL can be overridden in the sidebar or via the
+LMSTUDIO_BASE_URL environment variable.
 """
 
 from __future__ import annotations
 
 import html
 import json
+import os
 import time
+from collections.abc import Iterator
 from dataclasses import dataclass
 from typing import Any
 
 import requests
 import streamlit as st
 
-
-DEFAULT_BASE_URL = "http://localhost:8000"
+DEFAULT_BASE_URL = os.environ.get("LMSTUDIO_BASE_URL", "http://192.168.21.1:45")
 DEFAULT_PROMPT_A = (
     "You are Participant A in a thoughtful dialogue. Reason carefully, stay on topic, "
     "respond directly to the other participant, and keep each message to 2-4 sentences."
@@ -184,6 +186,59 @@ def request_chat_completion(
     return content
 
 
+def stream_chat_completion(
+    *,
+    base_url: str,
+    model_id: str,
+    messages: list[dict[str, str]],
+    temperature: float,
+    max_tokens: int,
+) -> Iterator[str]:
+    """Stream an LM Studio completion, yielding content pieces as they arrive."""
+    payload = {
+        "model": model_id,
+        "messages": messages,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        "stream": True,
+    }
+
+    with requests.post(
+        f"{base_url.rstrip('/')}/v1/chat/completions",
+        json=payload,
+        stream=True,
+        timeout=300,
+    ) as response:
+        try:
+            response.raise_for_status()
+        except requests.HTTPError as exc:
+            detail = ""
+            try:
+                detail = response.json().get("error", {}).get("message", "")
+            except ValueError:
+                detail = response.text.strip()
+            if detail:
+                raise RuntimeError(detail) from exc
+            raise
+
+        for raw_line in response.iter_lines(decode_unicode=True):
+            if not raw_line or not raw_line.startswith("data:"):
+                continue
+            data = raw_line[len("data:") :].strip()
+            if data == "[DONE]":
+                break
+            try:
+                chunk = json.loads(data)
+            except ValueError:
+                continue
+            choices = chunk.get("choices", [])
+            if not choices:
+                continue
+            piece = (choices[0].get("delta", {}).get("content")) or ""
+            if piece:
+                yield piece
+
+
 def sanitize_reply(reply: str) -> str:
     """Remove accidental speaker prefixes so the transcript stays clean."""
     cleaned = reply.strip()
@@ -193,8 +248,14 @@ def sanitize_reply(reply: str) -> str:
     return cleaned
 
 
-def render_transcript(messages: list[ChatMessage]) -> None:
-    """Render the transcript with simple message bubble styling."""
+def render_transcript(
+    messages: list[ChatMessage], pending: ChatMessage | None = None
+) -> None:
+    """Render the transcript with simple message bubble styling.
+
+    If ``pending`` is given it is rendered as an extra, in-progress bubble after
+    the committed messages, so a streaming reply ticks in live.
+    """
     transcript_html = [
         (
             '<div style="'
@@ -207,17 +268,26 @@ def render_transcript(messages: list[ChatMessage]) -> None:
         )
     ]
 
-    if not messages:
+    display = list(messages)
+    if pending is not None:
+        display.append(pending)
+
+    if not display:
         transcript_html.append(
             '<div style="color:#6a5a48;">The conversation transcript will appear here.</div>'
         )
     else:
-        for index, message in enumerate(messages):
+        for index, message in enumerate(display):
             is_left = index % 2 == 0
             row_justify = "flex-start" if is_left else "flex-end"
             bubble_background = "#fff8ef" if is_left else "#dcecff"
             bubble_border = "#e9dcc8" if is_left else "#bfd7fb"
             bubble_text = "#3c2d1c" if is_left else "#1d314a"
+            is_pending = pending is not None and index == len(display) - 1
+            cursor = (
+                '<span style="opacity:0.5;">▌</span>' if is_pending else ""
+            )
+            label_suffix = " · typing…" if is_pending else ""
             transcript_html.append(
                 (
                     f'<div style="display:flex; justify-content:{row_justify}; margin:10px 0;">'
@@ -225,9 +295,11 @@ def render_transcript(messages: list[ChatMessage]) -> None:
                     f'box-shadow:0 6px 18px rgba(72, 49, 22, 0.08); white-space:pre-wrap; '
                     f'line-height:1.4; font-size:0.98rem; background:{bubble_background}; '
                     f'border:1px solid {bubble_border}; color:{bubble_text};">'
-                    f'<div style="font-size:0.78rem; font-weight:600; margin-bottom:6px; opacity:0.85;">'
-                    f'{html.escape(message.speaker)} · {html.escape(message.model_id)}'
-                    f"</div>{html.escape(message.content)}</div></div>"
+                    f'<div style="font-size:0.78rem; font-weight:600; '
+                    f'margin-bottom:6px; opacity:0.85;">'
+                    f"{html.escape(message.speaker)} · "
+                    f"{html.escape(message.model_id)}{label_suffix}"
+                    f"</div>{html.escape(message.content)}{cursor}</div></div>"
                 )
             )
 
@@ -297,20 +369,31 @@ def run_conversation(
             transcript=st.session_state.messages,
         )
 
-        reply = request_chat_completion(
+        pending = ChatMessage(
+            speaker=participant["speaker"],
+            model_id=participant["model_id"],
+            role="assistant",
+            content="",
+        )
+        accumulated = ""
+        for piece in stream_chat_completion(
             base_url=base_url,
             model_id=participant["model_id"],
             messages=messages,
             temperature=temperature,
             max_tokens=max_tokens,
-        )
+        ):
+            accumulated += piece
+            pending.content = accumulated
+            with transcript_placeholder.container():
+                render_transcript(st.session_state.messages, pending=pending)
 
         st.session_state.messages.append(
             ChatMessage(
                 speaker=participant["speaker"],
                 model_id=participant["model_id"],
                 role="assistant",
-                content=sanitize_reply(reply),
+                content=sanitize_reply(accumulated),
             )
         )
 
@@ -431,7 +514,9 @@ def main() -> None:
 
     action_col1, action_col2 = st.columns([1, 1])
     with action_col1:
-        run_clicked = st.button("Start Timed Conversation", type="primary", use_container_width=True)
+        run_clicked = st.button(
+            "Start Timed Conversation", type="primary", use_container_width=True
+        )
     with action_col2:
         clear_clicked = st.button("Clear Transcript", use_container_width=True)
 
